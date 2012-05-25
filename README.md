@@ -6,7 +6,7 @@ WP Realm is a soon to be launched blog concerning all things WordPress. The main
 Where are you at?
 -----------------
 
-You can already find us at [http://wprealm.com](http://wpreal.com) where we'll build the site for all to see and follow.
+You can already find us at [http://wprealm.com](http://wprealm.com) where we'll build the site for all to see and follow.
 
 WP Realm Theme
 --------------
