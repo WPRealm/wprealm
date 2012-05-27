@@ -1,7 +1,7 @@
 WP Realm
 ========
 
-WP Realm is a soon to be launched blog concerning all things WordPress. The main purpose behind WP Realm and general focus will be non-commercial community blog which will focus on all WordPress business/blogs/people etc. No just centric around the US community. No doubt the occasional American may appear but it’s aim is to be more balanced, to keep people up-to-date on non-US news and to promote non-US WP businesses. 
+WP Realm is a soon to be launched blog concerning all things WordPress. The main purpose behind WP Realm and general focus will be non-commercial community blog which will focus on all WordPress business/blogs/people etc. No just centric around the US community. No doubt the occasional news about American news may appear, but it’s aim is to be more balanced, to keep people up-to-date on non-US news and to promote all WP businesses around the world. 
 
 Where are you at?
 -----------------
