@@ -1,7 +1,9 @@
 WP Realm
 ========
 
-WP Realm is a soon to be launched blog concerning all things WordPress. The main purpose behind WP Realm and general focus will be non-commercial community blog which will focus on all WordPress business/blogs/people etc. No just centric around the US community. No doubt the occasional American news will appear too, but it’s aim is to be more balanced, to keep people up-to-date on non-US news and to promote all WP businesses around the world. 
+WP Realm is a soon-to-be-launched blog concerning all things WordPress. This is a non-commercial community blog, focusing on the WordPress community worldwide. The means reporting on WordPress news and events across the world, from France to Serbia to China to India to South Africa to the USA and everywhere in between! Our focus will be on WordPress businesses, blogs, events, people and services. As a community project, we'd love for you to get involved, whether it's helping with the design and development, to reporting the news, to writing an editorial, or just giving us your feedback.
+
+WP Realm will be published in English, but we invite contributions from anyone, no matter what their first language. Articles don't need to be in perfect English as everything will be edited before being published. Follow the project or get in touch to get involved. 
 
 Where are you at?
 -----------------
