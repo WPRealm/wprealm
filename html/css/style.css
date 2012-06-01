@@ -783,10 +783,10 @@ width: 100%;
 }
 #header-nav ul li {
 float: left;
-padding: 0 40px;
+padding: 0 30px;
 }
 #header-nav ul li.first {
-padding-left: 80px;
+padding-left: 60px;
 }
 #header-nav ul li a {
 line-height: 5.4rem;
@@ -916,6 +916,24 @@ padding: 4px;
 /*--------------------------------------------------------------
 5.6 - Forms
 --------------------------------------------------------------*/
+form#header-search {
+float: right;
+}
+form#header-search input {
+background:url('../images/txture-light.png') repeat;
+border: 0;
+width: 220px;
+line-height: 35px;
+height: 35px;
+color: #a4a4a4;
+padding: 0 15px;
+}
+form#body-search {
+display: none;
+}
+form#body-search input {
+width: 100%;
+}
 /*--------------------------------------------------------------
 5.7 - Widgets
 --------------------------------------------------------------*/
@@ -966,6 +984,14 @@ display: none;
 }
 }
 @media only screen and (min-width:768px) {
+}
+@media only screen and (min-width:600px) and (max-width:991px) {
+form#header-search {
+display: none;
+}
+form#body-search {
+display: block;
+}
 }
 @media only screen and (max-width:768px) {
 #sponsors {
