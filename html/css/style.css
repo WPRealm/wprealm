@@ -333,6 +333,10 @@ font-size: 16px;
 font-size: 1.6rem;
 background: #fff;
 }
+#site-wrapper {
+max-width:1260px;
+margin:0 auto;
+}
 /*--------------------------------------------------------------
 2.1 - Content
 --------------------------------------------------------------*/
@@ -352,11 +356,13 @@ header#branding {
 #site-footer {
 background: #f5f5f5;
 color: #646464;
+max-width:1260px;
+margin:0 auto;
 }
 #footer-widgets {
 }
-#footer-widgets .last {
-	margin-right: 0;
+#footer-widgets .widget.footer.last {
+margin-right: 0;
 }
 /*--------------------------------------------------------------
 2.4 - Sidebar
@@ -366,8 +372,7 @@ color: #646464;
 /*--------------------------------------------------------------
 2.5 - Front page
 --------------------------------------------------------------*/
-#site-wrapper {
-}
+
 #feature-posts {
 }
 .feature-article {
@@ -514,14 +519,6 @@ top: -0.5em;
 }
 sub {
 bottom: -0.25em;
-}
-.tip {
-background: #1D1D1D;
-padding: 1em 1em 0.5em 1em;
-border: 1px solid #222;
-margin: 1em 0;
-overflow: hidden;
-color: white;
 }
 /*--------------------------------------------------------------
 3.2 - Headers
@@ -836,16 +833,16 @@ list-style: none;
 }
 @media only screen and (min-width:992px) {
 #footer-widgets .widget {
-	width: 22%;
-	margin-right: 4%;
-	float: left;
+width: 22%;
+margin-right: 4%;
+float: left;
 }
 }
 @media only screen and (min-width:1382px) {
 #footer-widgets .widget {
-	width: 22%;
-	margin-right: 4%;
-	float: left;
+width: 22%;
+margin-right: 4%;
+float: left;
 }
 }
 
