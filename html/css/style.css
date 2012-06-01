@@ -331,6 +331,7 @@ body {
 font-family: Helvetica, sans-serif;
 font-size: 16px;
 font-size: 1.6rem;
+line-height:1.6em;
 background: #fff;
 }
 #site-wrapper, #header-inner {
@@ -419,14 +420,14 @@ margin-bottom: 25px;
 width: 5%;
 margin: 0 2.5%;
 float: left;
-color: #F60;
+color: #ff6600;
 }
 .meta-comments{
 display: none;
 }
 .meta-comment i{
 font-size: 6.0rem;
-color: #F60;
+color: #ff6600;
 line-height: 0.9em;
 }
 .comment-number{
@@ -439,10 +440,15 @@ float: right;
 width: 90%;
 }
 .meta-post {
+border-bottom:1px solid #eee;
+margin-bottom:1em;
+padding-bottom:1em
 }
 .meta-date {
+margin-right:0.5em;
 }
 .meta-author {
+margin-right:0.5em;
 }
 .meta-category {
 }
@@ -451,6 +457,10 @@ margin-bottom: 40px;
 }
 .latest-lead {
 color:#999;
+}
+.meta-post i{
+margin-right:6px;
+color: #ff6600;
 }
 /*--------------------------------------------------------------
 3.1 - Text
@@ -637,7 +647,8 @@ text-transform: uppercase;
 }
 .latest-article h1{
 font-size:40px;
-font-size:4.0rem;	
+font-size:4.0rem;
+margin-bottom: 0.4em;	
 }
 /*--------------------------------------------------------------
 3.3 - Lists
