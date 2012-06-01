@@ -396,6 +396,7 @@ margin-right: 0;
 .latest-image {
 }
 .latest-lead {
+color:#999;
 }
 /*--------------------------------------------------------------
 3.1 - Text
@@ -579,6 +580,10 @@ font-size: 1.4rem;
 font-weight: normal;
 letter-spacing: 1px;
 text-transform: uppercase;
+}
+.latest-article h1{
+font-size:40px;
+font-size:4.0rem;	
 }
 /*--------------------------------------------------------------
 3.3 - Lists
@@ -837,6 +842,14 @@ width: 22%;
 margin-right: 4%;
 float: left;
 }
+#primary{
+float:left;
+width:75%;
+}
+#sidebar{
+float:right;
+width:22%;	
+}
 }
 @media only screen and (min-width:1382px) {
 #footer-widgets .widget {
@@ -844,8 +857,15 @@ width: 22%;
 margin-right: 4%;
 float: left;
 }
+#primary{
+float:left;
+width:75%;
+}
+#sidebar{
+float:right;
+width:22%;	
+}
 }
 
-}
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5) {/* Styles */
 }
