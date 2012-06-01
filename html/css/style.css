@@ -337,6 +337,7 @@ background: #fff;
 #site-wrapper, #header-inner {
 max-width:1260px;
 margin:0 auto;
+padding: 15px;
 }
 /*--------------------------------------------------------------
 2.1 - Content
@@ -368,6 +369,7 @@ margin-right:10px;
 #site-footer {
 background: #f5f5f5;
 color: #646464;
+padding: 0 15px;
 }
 #footer-widgets {
 max-width:1260px;
@@ -951,9 +953,6 @@ width:22%;
 }
 }
 @media only screen and (max-width:992px) {
-#sponsors {
-padding: 0 15px;
-}
 #sponsors li {
 float: left;
 width: 30%;
