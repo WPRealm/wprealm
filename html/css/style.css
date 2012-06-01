@@ -537,7 +537,7 @@ margin: 0;
 font-weight: 700;
 color: inherit;
 text-rendering: optimizelegibility;
-font-family: 'Bitter',sans-serif;
+font-family: 'Oswald', sans-serif;
 color: #111;
 }
 h1,
@@ -690,7 +690,9 @@ nav#header-nav {
 }
 nav#footer-nav {
 }
-
+a, a:link{color:#ff6600;}
+a:visited{color:#ff8833;}
+a:hover{color:#dd5500;}
 /*--------------------------------------------------------------
 4.1 - Pagination
 --------------------------------------------------------------*/
