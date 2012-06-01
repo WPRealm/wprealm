@@ -367,10 +367,11 @@ margin-right:10px;
 #site-footer {
 background: #f5f5f5;
 color: #646464;
-max-width:1260px;
-margin:0 auto;
 }
 #footer-widgets {
+max-width:1260px;
+margin:0 auto;
+padding: 2em 0;
 }
 #footer-widgets .widget.footer.last {
 margin-right: 0;
