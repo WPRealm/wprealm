@@ -333,7 +333,7 @@ font-size: 16px;
 font-size: 1.6rem;
 background: #fff;
 }
-#site-wrapper {
+#site-wrapper, #header-inner {
 max-width:1260px;
 margin:0 auto;
 }
@@ -347,13 +347,20 @@ margin:0 auto;
 --------------------------------------------------------------*/
 header#branding {
 background:url('../images/txture.png') repeat-x;
-/* just adding padding for now here to get it to show up */
-padding:2em 0;
 width:100%;
 }
 #logo {
+color:#fff;
+font-family: 'Oswald', sans-serif;
+font-size:28px;
+font-size:2.8rem;
+float:left;
+padding:0.5em 0;
 }
-
+.blue-highlight{
+color:#00bbff;
+margin-right:10px;
+}
 /*--------------------------------------------------------------
 2.3 - Footer
 --------------------------------------------------------------*/
