@@ -346,6 +346,10 @@ margin:0 auto;
 2.2 - Header
 --------------------------------------------------------------*/
 header#branding {
+background:url('../images/txture.png') repeat-x;
+/* just adding padding for now here to get it to show up */
+padding:2em 0;
+width:100%;
 }
 #logo {
 }
