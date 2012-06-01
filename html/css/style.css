@@ -411,8 +411,20 @@ margin-bottom: 26px;
 #latest-posts {
 }
 .latest-article {
+border-bottom: 1px solid #d1cfcf;
+margin-bottom: 25px;
 }
 .meta-comment {
+width: 5%;
+margin: 0 2.5%;
+float: left;
+}
+.meta-comments {
+display: none;
+}
+.post-content {
+float: right;
+width: 90%;
 }
 .meta-post {
 }
@@ -423,6 +435,7 @@ margin-bottom: 26px;
 .meta-category {
 }
 .latest-image {
+margin-bottom: 40px;
 }
 .latest-lead {
 color:#999;
@@ -906,6 +919,15 @@ margin-right: 5%;
 }
 #sponsors li.third {
 margin-right: 0;
+}
+.meta-comment {
+display: none;
+}
+.meta-comments {
+display: inline;
+}
+.post-content {
+width: 100%;
 }
 }
 @media only screen and (min-width:1382px) {
