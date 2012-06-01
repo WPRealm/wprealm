@@ -297,13 +297,30 @@ nav#footer-nav {
 }
 .latest-lead {
 }
-#site-footer {
-}
-#footer-widgets {
-}
-.widget {
-}
 h2 {
 }
 h4 {
+}
+
+/* SITE FOOTER */
+
+#site-footer {
+	background: #f5f5f5;
+	color: #646464;
+}
+
+#footer-widgets {
+}
+
+.widget {
+}
+
+#footer-widgets .widget {
+	width: 22%;
+	margin-right: 4%;
+	float: left;
+}
+
+#footer-widgets .last {
+	margin-right: 0;
 }
