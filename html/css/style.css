@@ -376,7 +376,6 @@ margin-right: 0;
 /*--------------------------------------------------------------
 2.5 - Front page
 --------------------------------------------------------------*/
-
 #feature-posts {
 }
 .feature-article {
@@ -854,6 +853,14 @@ width:75%;
 float:right;
 width:22%;	
 }
+.feature-article {
+float: left;
+width: 31%;
+margin-right: 3%;
+}
+.feature-article.last{
+margin-right:0%;
+}
 }
 @media only screen and (min-width:1382px) {
 #footer-widgets .widget {
@@ -868,6 +875,14 @@ width:75%;
 #sidebar{
 float:right;
 width:22%;	
+}
+.feature-article {
+float: left;
+width: 31%;
+margin-right: 3%;
+}
+.feature-article.last{
+margin-right:0%;
 }
 }
 
