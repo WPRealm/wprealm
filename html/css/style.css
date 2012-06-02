@@ -813,6 +813,18 @@ filter: dropshadow(color=#000000, offx=2, offy=2);
 transition: color 1s ease;
 color: #f60;
 }
+#pages-nav {
+padding: 0 0 1em 0;
+}
+#pages-nav a {
+text-decoration: none;
+}
+#pages-nav .prev-nav {
+float: left;
+}
+#pages-nav .next-nav {
+float: right;
+}
 a, a:link{color:#ff6600;}
 a:visited{color:#ff8833;}
 a:hover{color:#dd5500;}
