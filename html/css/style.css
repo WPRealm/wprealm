@@ -980,6 +980,18 @@ display: none;
 form#body-search input {
 width: 100%;
 }
+label {
+width: 150px;
+display: block;
+float: left;
+}
+.comment-subscription-form input {
+float: left;
+margin: 5px 20px 0 0;
+}
+.comment-subscription-form label {
+width: 400px;
+}
 /*--------------------------------------------------------------
 5.7 - Widgets
 --------------------------------------------------------------*/
