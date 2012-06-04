@@ -389,20 +389,19 @@ color: #fff;
 padding: 0.5em 15px;
 }
 footer.entry-meta {
-background: #f5f5f5;
-border-top: 1px solid #d1cfcf;
-padding: 1em 2em;
+padding: 1em 0;
+color: #848484;
 }
-#author-info {
-padding: 1em 0 0;
+footer.entry-meta h2 {
+font-weight: normal;
 }
 #author-avatar {
 float: left;
-margin-right: -78px;
+width: 10%;
 }
 #author-description {
-float: left;
-margin-left: 108px;
+float: right;
+width: 90%;
 }
 /*--------------------------------------------------------------
 2.4 - Sidebar
@@ -464,6 +463,10 @@ text-overflow: ellipsis;
 border-bottom: 1px solid #d1cfcf;
 margin-bottom: 25px;
 }
+.single-post .latest-article {
+border-bottom: 0;
+margin-bottom: 0;
+}
 .meta-comment {
 width: 5%;
 margin: 0 2.5%;
@@ -486,6 +489,9 @@ font-weight: 700;
 .post-content {
 float: right;
 width: 90%;
+}
+.single-post .post-content {
+border-bottom: 1px solid #d1cfcf;
 }
 .meta-post {
 border-bottom:1px solid #eee;
@@ -869,14 +875,37 @@ margin-right: auto;
 /*--------------------------------------------------------------
 5.2 - Comments
 --------------------------------------------------------------*/
+#respond {
+background: #f5f5f5;
+margin: 1em 0;
+padding: 1em;
+}
+#comments-title {
+width: 90%;
+float: right;
+border-top: 1px solid #000;
+border-bottom: 1px solid #000;
+padding: 0.5em 0;
+}
 .commentlist {
 padding: 0;
 margin: 0;
 list-style: none;
 }
-.commentlist .comment-author .avatar {
-margin-right: 20px;
-display: block;
+.comment-picture {
+float: left;
+width: 10%;
+}
+.comment-body {
+float: right;
+width: 90%;
+border-bottom: 1px solid #d1cfcf;
+padding: 0 0 1em;
+margin: 0 0 1em;
+}
+.last .comment-body {
+border-bottom: 0;
+margin: 0;
 }
 /*--------------------------------------------------------------
 5.3 - Gallery
@@ -921,17 +950,12 @@ width: auto !important;
 max-width: 100%;
 }
 img.avatar {
-background: #333;
-border-bottom: 1px solid #eee;
-border-left: 1px solid #eee;
-border-right: 1px solid #eee;
-border-top: 1px solid #eee;
-border-radius: 3px;
--khtml-border-radius: 3px;
--moz-border-radius: 3px;
--webkit-border-radius: 3px;
-padding: 2px;
+border-radius: 50%;
+-khtml-border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
 float: left;
+max-width: 100% !important;
 }
 img.wp-smiley {
 border: none !important;
@@ -1082,6 +1106,12 @@ margin-right: 0;
 }
 .meta-comment {
 display: none;
+}
+#comments-title {
+width: 100%;
+}
+#author-description, .comment-body {
+width: 85%;
 }
 .meta-comments {
 display: inline;
