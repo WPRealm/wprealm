@@ -396,13 +396,26 @@ display: none;
 footer.entry-meta h2 {
 font-weight: normal;
 }
-#author-avatar {
+.author-avatar {
 float: left;
 width: 10%;
 }
-#author-description {
+#sidebar .author-avatar {
+float: left;
+width: 20%;
+}
+.author-description {
 float: right;
 width: 90%;
+}
+#sidebar .author-description {
+float: right;
+width: 75%;
+}
+#sidebar .author-profile {
+border-top: 1px solid #cecece;
+margin: 1em 0;
+padding: 1em 0 0;
 }
 /*--------------------------------------------------------------
 2.4 - Sidebar
@@ -1111,7 +1124,7 @@ display: none;
 #comments-title {
 width: 100%;
 }
-#author-description, .comment-body {
+.author-description, .comment-body {
 width: 85%;
 }
 .meta-comments {
