@@ -246,6 +246,9 @@ $.fn.creepyUncle = function(options, lockBottom) {
 			if (newpos > bottomPos) {
 				newpos = bottomPos;
 			}
+			if ( $(window).width() < opts.minWidth ) {
+				newpos = 0;
+			}
 			$obj.animate({ 'margin-top': newpos }, opts.duration, opts.easing );
 		}
 

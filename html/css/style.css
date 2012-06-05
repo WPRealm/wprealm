@@ -391,6 +391,7 @@ padding: 0.5em 15px;
 footer.entry-meta {
 padding: 1em 0;
 color: #848484;
+display: none;
 }
 footer.entry-meta h2 {
 font-weight: normal;
@@ -1124,6 +1125,12 @@ padding: 0 15px;
 }
 #header-nav ul li.first {
 padding-left: 30px;
+}
+.article-meta {
+display: none;
+}
+footer.entry-meta {
+display: block;
 }
 }
 @media only screen and (min-width:1382px) {

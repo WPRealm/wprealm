@@ -1,3 +1,3 @@
 jQuery(document).ready(function() {
-	$('#sidebar').creepyUncle({ duration: 1000, startOffset: 84, easing: 'jswing'});
+	$('#sidebar').creepyUncle({ duration: 1000, startOffset: 84, easing: 'jswing', minWidth: 993});
 });
