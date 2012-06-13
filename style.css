@@ -2,10 +2,10 @@
     Theme Name: WP Realm
 	Theme URI: http://wprealm.com
 	Description: WP Realm is a child theme created for the Genesis Framework.
-    Author: Remkus de Vries
-    Author URI: http://remkusdevries.com/
+    Author: WP Realm team
+    Author URI: http://wprealm.com/
  
-    Version: 1.0
+    Version: 0.8.5
  
     Template: genesis
     Template Version: 1.8
@@ -59,11 +59,433 @@
 
 */
 
-
 /* Import Fonts
 ------------------------------------------------------------ */
 
-@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
+
+/* Normalize.css
+------------------------------------------------------------ */
+
+/* 1.0 - Normalise - from HTML5 Boilerplate h5bp.com/css
+* What follows is the result of much research on cross-browser styling. 
+* Credit left inline and big thanks to Nicolas Gallagher,Jonathan Neal,
+* Kroc Camen,and the H5BP dev community and team.
+*
+* Detailed information about this CSS:h5bp.com/css
+*/
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+audio:not([controls]) {
+    display: none
+}
+
+[hidden] {
+    display: none
+}
+
+html {
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.231;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
+    color: #222;
+}
+
+::-moz-selection {
+    background: #fff400;
+    text-shadow: none;
+}
+
+::selection {
+    background: #fff400;
+    text-shadow: none;
+}
+
+a:focus {
+    outline: thin dotted
+}
+
+a:hover,
+a:active {
+    outline: 0
+}
+
+abbr[title] {
+    border-bottom: 1px dotted
+}
+
+b,
+strong {
+    font-weight: 700
+}
+
+blockquote {
+    margin: 1em 40px
+}
+
+dfn {
+    font-style: italic
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+ins {
+    background: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+    font-style: italic;
+    font-weight: 700;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace,monospace;
+    _font-family: 'courier new',monospace;
+    font-size: 1em;
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+q {
+    quotes: none
+}
+
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+small {
+    font-size: 85%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em
+}
+
+sub {
+    bottom: -0.25em
+}
+
+ul,
+ol {
+    margin: 1em 0;
+    padding: 0 0 0 40px;
+}
+
+dd {
+    margin: 0 0 0 40px
+}
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+figure {
+    margin: 0
+}
+
+form {
+    margin: 0
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    cursor: pointer
+}
+
+legend {
+    border: 0;
+    *margin-left: -7px;
+    padding: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+
+button,
+input {
+    line-height: normal;
+    *overflow: visible;
+}
+
+table button,
+table input {
+    *overflow: auto
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+input:valid,
+textarea:valid {
+
+}
+
+input:invalid,
+textarea:invalid {
+    background-color: #f0dddd
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    vertical-align: top
+}
+
+.ir {
+    display: block;
+    border: 0;
+    text-indent: -999em;
+    overflow: hidden;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    text-align: left;
+    direction: ltr;
+}
+
+.ir br {
+    display: none
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.clear {
+    clear: both
+}
+
+@media print { 
+	* {
+	    background: transparent !important;
+	    color: black !important;
+	    text-shadow: none !important;
+	    filter: none !important;
+	    -ms-filter: none !important;
+	}
+
+	/* ===[ Black prints faster:h5bp.com/s ]=== */
+
+	a,
+	a:visited {
+	    text-decoration: underline
+	}
+
+	a[href]:after {
+	    content: " (" attr(href) ")"
+	}
+
+	abbr[title]:after {
+	    content: " (" attr(title) ")"
+	}
+
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+	    content: ""
+	}
+
+	pre,
+	blockquote {
+	    border: 1px solid #999;
+	    page-break-inside: avoid;
+	}
+
+	thead {
+	    display: table-header-group
+	}
+
+	tr,
+	img {
+	    page-break-inside: avoid
+	}
+
+	img {
+	    max-width: 100% !important
+	}
+
+	@page {
+	    margin: 0.5cm
+	}
+
+	p,
+	h2,
+	h3 {
+	    orphans: 3;
+	    widows: 3;
+	}
+
+	h2,
+	h3 {
+	    page-break-after: avoid
+	}
+}
+
 
 
 /* Defaults
@@ -84,7 +506,7 @@ textarea {
 	color: #333;
 	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 	font-size: 16px;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1.5625;
 	margin: 0;
 	padding: 0;
@@ -95,7 +517,6 @@ blockquote,
 input,
 select,
 textarea,
-.author-box,
 .breadcrumb,
 .sticky,
 .taxonomy-description,
@@ -148,7 +569,7 @@ a img {
 ------------------------------------------------------------ */
 
 body {
-	background-color: #d5d5d5;
+	background-color: #f9f9f7;
 }
 
 ::-moz-selection {
@@ -166,12 +587,7 @@ body {
 ------------------------------------------------------------ */
 
 #wrap {
-	-moz-box-shadow: 0 0 5px #999;
-	-webkit-box-shadow: 0 0 5px #999;
-	background-color: #fff;
-	box-shadow: 0 0 5px #999;
-	margin: 15px auto;
-	width: 960px;
+	margin: 0 auto;
 	padding: 0;
 }
 
@@ -180,9 +596,14 @@ body {
 ------------------------------------------------------------ */
 
 #header {
-	margin: 0 auto;
+	background: url(images/bg_header.png) repeat-x 0 0 transparent;
 	min-height: 100px;
 	width: 100%;
+}
+
+#header .wrap {
+	max-width: 1260px;
+	margin: 0 auto;
 }
 
 #title-area {
@@ -193,8 +614,8 @@ body {
 }
 
 #title {
-	font-family: 'Oswald', arial, serif;
-	font-size: 36px;
+	font-family: 'Bitter', arial, serif;
+	font-size: 48px;
 	line-height: 1.25;
 	margin: 0;
 	text-transform: uppercase;
@@ -202,7 +623,7 @@ body {
 
 #title a,
 #title a:hover {
-	color: #333;
+	color: #fff;
 	padding: 0 0 0 20px;
 	text-decoration: none;
 }
@@ -210,6 +631,7 @@ body {
 #description {
 	font-size: 14px;
 	padding: 0 0 0 20px;
+	display: none;
 }
 
 #header .widget-area {
@@ -459,9 +881,11 @@ ul.menu li.sfHover ul,
 ------------------------------------------------------------ */
 
 #inner {
-	margin: 0 auto;
+	margin: 10px auto;
 	overflow: hidden;
 	padding: 20px;
+	max-width: 1260px;
+	min-height: 600px;
 }
 
 
@@ -516,12 +940,12 @@ ul.menu li.sfHover ul,
 #content {
 	float: left;
 	padding: 10px 20px;
-	width: 410px;
+	width: 70%;
 }
 
 .content-sidebar #content,
 .sidebar-content #content {
-	width: 580px;
+	width: 70%;
 }
 
 .sidebar-content #content,
@@ -533,12 +957,25 @@ ul.menu li.sfHover ul,
 	width: 880px;
 }
 
-.post {
+.hentry {
+	background-color: #fff;
+	border: #eee;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 3px;
+	-moz-box-shadow: rgba(0,0,0, 0.15) 0px 0px 3px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 	margin: 0 0 40px;
+	padding: 25px 0;
 }
 
 .entry-content {
 	overflow: hidden;
+	padding: 0 25px;
 }
 
 .entry-content p {
@@ -680,13 +1117,17 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Oswald', arial, serif;
+	font-family: 'Bitter', arial, serif;
 	line-height: 1.25;
 	margin: 0 0 10px;
 }
 
 h1 {
 	font-size: 30px;
+}
+
+.entry-title {
+	padding: 0 25px;
 }
 
 .taxonomy-description h1 {
@@ -702,7 +1143,7 @@ h2 a:visited {
 h2 a,
 h2 a:visited {
 	color: #333;
-	font-family: 'Oswald', arial, serif;
+	font-family: 'Bitter', arial, serif;
 }
 
 h2 a:hover {
@@ -724,8 +1165,11 @@ h4 {
 	font-size: 20px;
 }
 
-.taxonomy-description h1,
-.widget-area h4 {
+.sidebar h4 {
+	padding: 0 15px;
+}
+
+.taxonomy-description h1 {
 	background-color: #f5f5f5;
 	border-bottom: 1px solid #ddd;
 	font-size: 14px;
@@ -780,9 +1224,9 @@ h5 {
 
 .post-info {
 	font-size: 14px;
-	margin: -5px 0 15px;
+	margin: 0 0 15px;
+	padding: 0 25px;
 }
-
 
 /* Post Meta
 ------------------------------------------------------------ */
@@ -791,18 +1235,39 @@ h5 {
 	border-top: 1px solid #ddd;
 	clear: both;
 	font-size: 14px;
-	padding: 5px 0 0;
+	padding: 5px 25px 0;
 }
 
+/* Article Sidebar Meta
+------------------------------------------------------------ */
+
+#article-meta {
+	background-color: #fff;
+	border: #eee;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 3px;
+	-moz-box-shadow: rgba(0,0,0, 0.15) 0px 0px 3px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 25px 10px;
+	margin-bottom: 25px;
+}
+
+#article-meta .post-info {
+	padding: 0;
+}
 
 /* Author Box
 ------------------------------------------------------------ */
 
 .author-box {
-	background-color: #f5f5f5;
 	margin: 0 0 40px;
 	overflow: hidden;
-	padding: 10px;
+	padding: 0;
 }
 
 .author-box p {
@@ -853,9 +1318,7 @@ img {
 .featuredpage img,
 .featuredpost img,
 .post-image {
-	background-color: #f5f5f5;
-	border: 1px solid #ddd;
-	padding: 4px;
+	padding: 0;
 }
 
 .author-box .avatar {
@@ -960,7 +1423,8 @@ p.wp-caption-text {
 	display: inline;
 	float: right;
 	font-size: 14px;
-	width: 280px;
+	margin-top: 10px;
+	width: 25%;
 }
 
 #sidebar-alt {
@@ -982,8 +1446,6 @@ p.wp-caption-text {
 }
 
 .sidebar .widget {
-	background-color: #fff;
-	border: 1px solid #ddd;
 	margin: 0 0 15px;
 	padding: 0 0 15px;
 }
@@ -1145,7 +1607,7 @@ input:hover[type="submit"] {
 
 #wp-calendar thead {
 	background-color: #f5f5f5;
-	font-weight: bold;
+	font-weight: 700;
 	margin: 10px 0 0;
 }
 
@@ -1238,8 +1700,10 @@ input:hover[type="submit"] {
 }
 
 #footer .wrap {
+	margin: 0 auto;
 	overflow: hidden;
 	padding: 10px 15px;
+	max-width: 1260px;
 }
 
 #footer p {
@@ -1303,7 +1767,7 @@ input:hover[type="submit"] {
 
 .comment-list li,
 .ping-list li {
-	font-weight: bold;
+	font-weight: 700;
 	list-style-type: none;
 	margin: 15px 0 5px;
 	padding: 10px 15px;
@@ -1354,6 +1818,80 @@ input:hover[type="submit"] {
 .depth-1,
 .even {
 	border: 1px solid #ddd;
+}
+
+/* Tables
+------------------------------------------------------------ */
+ 
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.5em;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table th,
+table td {
+    padding: 20px;
+    vertical-align: top;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+table th {
+    font-weight: bold
+}
+
+table thead th {
+    vertical-align: bottom
+}
+
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+    border-top: 0
+}
+
+table tbody + tbody {
+    border-top: 2px solid #eee
+}
+
+table tbody tr:hover td,
+table tbody tr:hover th {
+    background-color: #fafafa
+}
+
+.table-condensed th,
+.table-condensed td {
+    padding: 5px
+}
+
+.table-bordered {
+    border: 1px solid #eee;
+    border-left: 0;
+    border-collapse: separate;
+    *border-collapse: collapsed;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border-left: 1px solid #eee
+}
+
+.table-bordered thead:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child td {
+    border-top: 0
+}
+
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+    background-color: #eee
 }
 
 
