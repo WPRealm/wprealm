@@ -1258,6 +1258,8 @@ h5 {
 	padding: 5px 25px 0;
 }
 
+.date, .author, .post-comments{display: block;}
+
 /* Article Sidebar Meta
 ------------------------------------------------------------ */
 
