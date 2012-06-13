@@ -645,7 +645,7 @@ body {
 #header .widget-area {
 	float: right;
 	padding: 25px 20px 0 0;
-	width: 510px;
+	width: 60%;
 }
 
 
@@ -1259,6 +1259,15 @@ h5 {
 }
 
 .date, .author, .post-comments{display: block;}
+
+img.avatar {
+border-radius: 50%;
+-khtml-border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+max-width: 100% !important;
+}
+
 
 /* Article Sidebar Meta
 ------------------------------------------------------------ */
