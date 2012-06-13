@@ -5,7 +5,7 @@
     Author: WP Realm team
     Author URI: http://wprealm.com/
  
-    Version: 0.8.5
+    Version: 0.8.7
  
     Template: genesis
     Template Version: 1.8
@@ -490,19 +490,23 @@ td {
 
 /* Defaults
 ------------------------------------------------------------ */
-html{font-size:62.5%;}
-body{
-	margin:0;
-	padding:0;
-	width:100%;
-	background-color:transparent;
-	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size:16px;
-	font-size:1.6rem;
-	line-height:1.8em;
-	color:#111;
-	font-weight:400;
+html{
+	font-size:62.5%;
 }
+
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: transparent;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.8em;
+	color: #111;
+	font-weight: 400;
+}
+
 body,
 h1,
 h2,
