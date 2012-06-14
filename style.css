@@ -1262,12 +1262,6 @@ h5 {
 	padding: 5px 25px 0;
 }
 
-.date, 
-.author, 
-.post-comments{
-	display: block;
-}
-
 img.avatar {
 	border-radius: 50%;
 	-khtml-border-radius: 50%;
@@ -1298,6 +1292,12 @@ img.avatar {
 
 #article-meta .post-info {
 	padding: 0;
+}
+
+#article-meta .date, 
+#article-meta .author, 
+#article-meta .post-comments {
+	display: block;
 }
 
 /* Author Box
