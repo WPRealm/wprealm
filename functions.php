@@ -38,18 +38,18 @@ function add_viewport_meta_tag() {
 add_theme_support( 'genesis-footer-widgets', 3 );
 
 
-add_action( 'genesis_before_post_title', 'wpr_wpthumb_featured_image_magic' );
+add_action( 'genesis_before_post_title', 'wpr_post_featured_content' );
 /**
  * Use WPThumb to display featured images on the fly.
  * 
- * @author Remkus de Vries
+ * @author Remkus de Vries, Daan Kortenbach
  * @uses wbthumb()
  * @uses wp_get_attachment_url()
  * @uses get_post_thumbnail_id()
  * @link https://github.com/humanmade/WPThumb
  *
  */
-function wpr_wpthumb_featured_image_magic() {
+function wpr_post_featured_content() {
 	global $post;
 
 
@@ -70,10 +70,12 @@ function wpr_wpthumb_featured_image_magic() {
 	
 	// else, show featured image
 	$image_url = wpthumb( 
-		wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ), // get thumnail url by post thumbnail ID
+	
+		// get thumnail url by post thumbnail ID
+		wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ), 
 		$args = array(
 			'width'		=> 882, 
-			'height'	=> 400, /* Golden Ratio FTW */ 
+			'height'	=> 400,  
 			'crop'		=> true,
 			/*'default'    => CHILD_DIR . '/images/default.png',*/
 			/*'watermark_options'=> array(
@@ -102,9 +104,10 @@ function wpr_responsive_video() {
 	wp_enqueue_script(
 		'jquery-responsive-video',
 		CHILD_URL . '/lib/js/jquery.responsive.video.js',
-		array('jquery'),
+		array( 'jquery' ),
 		'0.1',
-		true //put in footer
+		//put in footer
+		true 
 	);
 }
 
@@ -212,7 +215,7 @@ add_filter( 'embed_oembed_html', 'wpr_oembed_transparency', 10, 4 );
 function wpr_oembed_transparency( $html, $url, $attr, $post_id ) {
 
 	if ( strpos( $html, "<embed src=" ) !== false ){
-		return str_replace('</param><embed', '</param><param name="wmode" value="opaque"></param><embed wmode="opaque" ', $html);
+		return str_replace( '</param><embed', '</param><param name="wmode" value="opaque"></param><embed wmode="opaque" ', $html );
 	}
 	elseif ( strpos ( $html, 'feature=oembed' ) !== false ){
 		return str_replace( 'feature=oembed', 'feature=oembed&wmode=opaque', $html );
@@ -221,5 +224,3 @@ function wpr_oembed_transparency( $html, $url, $attr, $post_id ) {
 		return $html;
 	}
 }
-
-
