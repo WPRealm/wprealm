@@ -2,19 +2,25 @@
 /** Start the engine */
 require_once( get_template_directory() . '/lib/init.php' );
 
+
 /** Child theme (do not remove) */
 define( 'CHILD_THEME_NAME', 'WP Realm' );
 define( 'CHILD_THEME_URL', 'http://wprealm.com' );
 
+
 /** Loading HTML5 features*/
-require_once( CHILD_DIR. '/lib/markup/html5.php' );
+include 'lib/markup/html5.php';
+
 
 /** WP Thumb even better then 'resize on demand' */
-if ( !class_exists( 'WP_Thumb' ) )
+if( !class_exists( 'WP_Thumb' ) ){
    include 'lib/plugins/WPThumb/wpthumb.php';
+}
+
 
 /** Metaboxes are here */
 include 'lib/admin/metaboxes.php';
+
 
 add_action( 'genesis_meta', 'add_viewport_meta_tag' );
 /**
@@ -27,8 +33,10 @@ function add_viewport_meta_tag() {
     echo '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>';
 }
 
+
 /** Add support for 3-column footer widgets */
 add_theme_support( 'genesis-footer-widgets', 3 );
+
 
 add_action( 'genesis_before_post_title', 'wpr_wpthumb_featured_image_magic' );
 /**
@@ -44,29 +52,27 @@ add_action( 'genesis_before_post_title', 'wpr_wpthumb_featured_image_magic' );
 function wpr_wpthumb_featured_image_magic() {
 	global $post;
 	
-	$image = wpthumb( 
-	
-	//find the image
-	wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ), 
-	
-	$args = array(
-		'width'		=> 882, 
-		'height'	=> 400, /* Golden Ratio FTW */ 
-		'crop'		=> true,
-		/*'default'    => CHILD_DIR . '/images/default.png',*/
-		/*'watermark_options'=> array(
-			'mask' => wpthumb( CHILD_URL . '/images/wprealm-watermark.png', 'height=20'),
-			'padding' => 0, 
-			'position' => 'rb', 
-			'pre_resize' => false
+	$image_url = wpthumb( 
+		wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ), // get thumnail url by post thumbnail ID
+		$args = array(
+			'width'		=> 882, 
+			'height'	=> 400, /* Golden Ratio FTW */ 
+			'crop'		=> true,
+			/*'default'    => CHILD_DIR . '/images/default.png',*/
+			/*'watermark_options'=> array(
+				'mask' => wpthumb( CHILD_URL . '/images/wprealm-watermark.png', 'height=20'),
+				'padding' => 0, 
+				'position' => 'rb', 
+				'pre_resize' => false
 			)*/
 		) 
 		
 	);
 	
-	echo '<img class="feature-image" src=" '.$image . '">';
+	echo '<img class="feature-image" src=" '.$image_url . '">';
 	
 }
+
 
 add_action( 'genesis_before_sidebar_widget_area', 'wpr_sidebar_author_meta' );
 /**
@@ -94,6 +100,7 @@ function wpr_sidebar_author_meta() {
 	}
 }
 
+
 add_filter( 'genesis_footer_backtotop_text', 'wpr_footer_backtotop_filter' );
 /**
  * Customizing Return to Top of Page section in Footer
@@ -108,6 +115,7 @@ function wpr_footer_backtotop_filter( $backtotop ) {
     
     return $backtotop;
 }  
+
 
 add_filter( 'genesis_footer_creds_text', 'wpr_footer_creds_filter' ); 
 /**
@@ -149,6 +157,7 @@ function wpr_changing_contactmethods( $contactmethods ) {
 
 	return $contactmethods;
 }
+
 
 add_filter( 'embed_oembed_html', 'wpr_oembed_transparency', 10, 4 );
 /**
