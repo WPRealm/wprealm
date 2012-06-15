@@ -64,7 +64,7 @@ function wpr_wpthumb_featured_image_magic() {
 
 	// if a featured video isset
 	if( $video = get_post_meta( $post->ID, '_wpr_featured_video' ) ){
-		echo wp_oembed_get( $video[0], array( 'width' => 882 ) );
+		echo '<div class="videocontainer"> ' . wp_oembed_get( $video[0], array( 'width' => 882 ) ) . '</div>';
 		return;
 	}
 	
@@ -88,6 +88,24 @@ function wpr_wpthumb_featured_image_magic() {
 	
 	echo '<img class="feature-image" src=" '.$image_url . '">';
 	
+}
+
+
+add_action('wp_enqueue_scripts', 'wpr_responsive_video');
+/**
+ * Adds responsive video jQuery
+ * 
+ * @access public
+ * @author Daan Kortenbach
+ */
+function wpr_responsive_video() {
+	wp_enqueue_script(
+		'jquery-responsive-video',
+		CHILD_URL . '/lib/js/jquery.responsive.video.js',
+		array('jquery'),
+		'0.1',
+		true //put in footer
+	);
 }
 
 
