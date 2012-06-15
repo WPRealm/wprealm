@@ -620,7 +620,7 @@ body {
 
 #header {
 	background: url(images/bg_header.png) repeat-x 0 0 transparent;
-	min-height: 100px;
+	overflow: hidden;
 	width: 100%;
 }
 
@@ -638,8 +638,8 @@ body {
 
 #title {
 	font-family: 'Bitter', arial, serif;
-	font-size: 48px;
-	font-size: 4.8rem;
+	font-size: 38px;
+	font-size: 3.8rem;
 	line-height: 1.25;
 	margin: 0;
 	text-transform: uppercase;
@@ -661,7 +661,7 @@ body {
 
 #header .widget-area {
 	float: right;
-	padding: 25px 20px 0 0;
+	padding: 20px 0 15px 0;
 	width: 60%;
 }
 
@@ -703,7 +703,6 @@ body {
 .menu-primary,
 .menu-secondary,
 #header .menu {
-	background-color: #f5f5f5;
 	clear: both;
 	color: #333;
 	font-size: 14px;
@@ -714,7 +713,6 @@ body {
 }
 
 #header .menu {
-	border: 1px solid #ddd;
 	box-sizing: border-box;
 }
 
@@ -738,15 +736,14 @@ body {
 .menu-primary li,
 .menu-secondary li,
 #header .menu li {
-	float: left;
+	float: right;
 	list-style-type: none;
 }
 
 .menu-primary a,
 .menu-secondary a,
 #header .menu a {
-	border-right: 1px solid #ddd;
-	color: #333;
+	color: #fff;
 	display: block;
 	padding: 7px 15px 6px;
 	position: relative;
@@ -768,8 +765,8 @@ body {
 #header .menu .current_page_item a,
 #header .menu .current-cat a,
 #header .menu .current-menu-item a {
-	background-color: #fff;
-	color: #333;
+	background-color: #333;
+	color: #eee;
 }
 
 .menu-primary li li a,
@@ -998,7 +995,7 @@ ul.menu li.sfHover ul,
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	margin: 0 0 40px;
-	padding: 25px 0;
+	padding: 0;
 }
 
 .entry-content {
