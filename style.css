@@ -642,6 +642,8 @@ body {
 	font-size: 3.8rem;
 	line-height: 1.25;
 	margin: 0;
+	background: url('images/wprealm-logo.png') 3px no-repeat;
+	padding: 0 0 0 35px;
 	text-transform: uppercase;
 }
 
