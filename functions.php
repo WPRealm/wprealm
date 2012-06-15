@@ -51,7 +51,14 @@ add_action( 'genesis_before_post_title', 'wpr_wpthumb_featured_image_magic' );
  */
 function wpr_wpthumb_featured_image_magic() {
 	global $post;
+
+	// if a featured video isset
+	if( $video = get_post_meta( $post->ID, '_wpr_featured_video' ) ){
+		echo wp_oembed_get( $video[0], array( 'width' => 882 ) );
+		return;
+	}
 	
+	// else, show featured image
 	$image_url = wpthumb( 
 		wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ), // get thumnail url by post thumbnail ID
 		$args = array(
@@ -176,10 +183,15 @@ add_filter( 'embed_oembed_html', 'wpr_oembed_transparency', 10, 4 );
  */
 function wpr_oembed_transparency( $html, $url, $attr, $post_id ) {
 
-	if ( strpos( $html, "<embed src=" ) !== false )
+	if ( strpos( $html, "<embed src=" ) !== false ){
 		return str_replace('</param><embed', '</param><param name="wmode" value="opaque"></param><embed wmode="opaque" ', $html);
-	elseif ( strpos ( $html, 'feature=oembed' ) !== false )
+	}
+	elseif ( strpos ( $html, 'feature=oembed' ) !== false ){
 		return str_replace( 'feature=oembed', 'feature=oembed&wmode=opaque', $html );
-	else
+	}
+	else{
 		return $html;
+	}
 }
+
+
