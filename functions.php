@@ -13,6 +13,9 @@ require_once( CHILD_DIR. '/lib/markup/html5.php' );
 if ( !class_exists( 'WP_Thumb' ) )
    include 'lib/plugins/WPThumb/wpthumb.php';
 
+/** Custom Metaboxes and Fields */
+include 'lib/metabox/init.php';
+
 add_action( 'genesis_meta', 'add_viewport_meta_tag' );
 /**
  * Add Viewport meta tag for mobile browsers 
