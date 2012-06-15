@@ -20,7 +20,27 @@ function wpr_metaboxes( array $meta_boxes ) {
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_wpr_';
 
-
+	/**
+	 * Featured Video Metabox
+	 */
+	$meta_boxes[] = array(
+		'id'         => 'post_lead',
+		'title'      => 'Lead text',
+		'pages'      => array( 'post' ), // Post type
+		'context'    => 'normal',
+		'priority'   => 'high',
+		'show_names' => true, // Show field names on the left
+		'fields' => array(
+			array(
+				'name' => 'Lead text',
+				'desc' => 'Add your lead text here',
+				'id'   => $prefix . 'lead_text',
+				'type'    => 'wysiwyg',
+				'options' => array(	'textarea_rows' => 5, ),
+			),
+		)
+	);
+	
 	/**
 	 * Featured Video Metabox
 	 */
