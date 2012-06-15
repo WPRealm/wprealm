@@ -128,14 +128,16 @@ function wpr_post_info() {
 	return;  
 	
 	?>
+	<div class="speech-tailmeta"></div>
 	<div class="post-info">
 		<span class="date published time">
-			<time class="entry-date" itemprop="startDate" datetime="<?php echo get_the_date( 'c' ); ?>" pubdate><?php echo get_the_date(); ?></time>
-		</span> By 
+			<i class="icon-calendar"></i><time class="entry-date" itemprop="startDate" datetime="<?php echo get_the_date( 'c' ); ?>" pubdate><?php echo get_the_date(); ?></time>
+		</span> 
 		<span class="author vcard">
-			<a class="fn n" href="<?php echo get_the_author_url( get_the_author_meta( 'ID' ) ); ?>" title="View <?php echo get_the_author(); ?>'s Profile" rel="author me"><?php the_author_meta( 'display_name' ); ?></a>
+			<i class="icon-user"></i>By <a class="fn n" href="<?php echo get_the_author_url( get_the_author_meta( 'ID' ) ); ?>" title="View <?php echo get_the_author(); ?>'s Profile" rel="author me"><?php the_author_meta( 'display_name' ); ?></a>
 		</span>
-		<span class="post-comments">&middot; <a href="<?php the_permalink() ?>#comments"><?php comments_number( 'Leave a Comment', '1 Comment', '% Comments' ); ?></a></span>
+		<span class="post-comments">
+			<i class="icon-comment"></i><a href="<?php the_permalink() ?>#comments"><?php comments_number( 'Leave a Comment', '1 Comment', '% Comments' ); ?></a></span>
 		<?php // if the post has been modified, display the modified date
 		$published = get_the_date( 'F j, Y' );
 		$modified = the_modified_date( 'F j, Y', '', '', FALSE );

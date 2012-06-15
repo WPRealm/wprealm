@@ -1157,7 +1157,7 @@ h1 {
 }
 
 .entry-title {
-	padding: 0 25px;
+	padding: 20px 25px 0 25px;
 }
 
 .taxonomy-description h1 {
@@ -1303,6 +1303,7 @@ img.avatar {
 	border-radius: 3px;
 	padding: 25px 20px;
 	margin-bottom: 25px;
+	position:relative;
 }
 
 #article-meta .post-info {
@@ -1322,11 +1323,21 @@ img.avatar {
 	margin: 0 0 40px;
 	overflow: hidden;
 	padding: 0;
+	border-top: 1px solid #ddd;
+	padding-top: 1em;
 }
 
 .author-box p {
 	font-size: 14px;
 	font-size: 1.4rem;
+}
+
+.speech-tailmeta{
+	position: absolute;
+	background: url('images/speechtail.png') 2px 0px no-repeat;
+	height: 24px;
+	width: 24px;
+	left: -24px;
 }
 
 
@@ -1353,13 +1364,22 @@ img.avatar {
 /* Post Icons
 ------------------------------------------------------------ */
 
-.post-comments,
-.tags {
-	background: url(images/icon-dot.png) no-repeat left;
-	margin: 0 0 0 3px;
-	padding: 0 0 0 10px;
+.post-info i{
+	margin: 0 10px 0 0;
+	color: #ff6600;
 }
 
+.post-info{
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.date{
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-family: 'Bitter', arial, serif;
+	font-weight: 700;
+}
 
 /* Images
 ------------------------------------------------------------ */
