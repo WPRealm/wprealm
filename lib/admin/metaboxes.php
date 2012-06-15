@@ -28,7 +28,7 @@ function wpr_metaboxes( array $meta_boxes ) {
 		'title'      => 'Lead text',
 		'pages'      => array( 'post' ), // Post type
 		'context'    => 'normal',
-		'priority'   => 'high',
+		'priority'   => 'core',
 		'show_names' => true, // Show field names on the left
 		'fields' => array(
 			array(

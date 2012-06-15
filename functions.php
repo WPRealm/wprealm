@@ -52,6 +52,16 @@ add_action( 'genesis_before_post_title', 'wpr_wpthumb_featured_image_magic' );
 function wpr_wpthumb_featured_image_magic() {
 	global $post;
 
+
+	// Rafa, this is for your gmap as featured image
+
+	// if gmap isset
+	// if( $gmap = [somecodethatgetsgmap] ) {
+	// 	echo $gmap;
+	// 	return;
+	// } 
+	
+
 	// if a featured video isset
 	if( $video = get_post_meta( $post->ID, '_wpr_featured_video' ) ){
 		echo wp_oembed_get( $video[0], array( 'width' => 882 ) );
