@@ -218,39 +218,49 @@ jQuery.extend( jQuery.easing,
 * info@lucdebrouwer.nl
 */
 
-$.fn.creepyUncle = function(options, lockBottom) {
-	var $obj = this;
-	var parentPaddingTop = parseInt($obj.parent().css('padding-top'));
-	var startOffset = $obj.parent().offset().top;
-	var opts = $.extend({ startOffset: startOffset, offsetY: parentPaddingTop, duration: 200, easing: 'jswing', lockBottom:true }, options);
-	if(opts.lockBottom){
-		var bottomPos = $obj.parent().height() - $obj.height() + parentPaddingTop
-		if( bottomPos < 0 )
-			bottomPos = 0;
-	}
-	$(window).scroll(function() {
-		$obj.stop();
-		var pastStartOffset = $(document).scrollTop() > opts.startOffset;
-		var objFartherThanTopPos = $obj.offset().top > startOffset;
-		var objSmallerThanWindow = $obj.outerHeight() < $(window).height();
-		// if window scrolled down more than startOffset OR obj position is greater than
-		// the top position possible (+ offsetY) AND window size must be bigger than Obj size
-		if( (pastStartOffset || objFartherThanTopPos) && objSmallerThanWindow ){
-			var newpos = ($(document).scrollTop() -startOffset + opts.offsetY );
-			if ( $(document).scrollTop() < opts.startOffset ) { // if window scrolled < starting offset, then reset Obj position (opts.offsetY);
-				newpos = parentPaddingTop;
-			}
-			//if(newpos > opts.startOffset) {
-			//	newpos = newpos - opts.startOffset;
-			//}
-			if (newpos > bottomPos) {
-				newpos = bottomPos;
-			}
-			if ( $(window).width() < opts.minWidth ) {
-				newpos = 0;
-			}
-			$obj.animate({ 'margin-top': newpos }, opts.duration, opts.easing );
-		}
+(function($) {
 
-	});
-};
+    $.fn.creepyUncle = function(options, lockBottom) {
+        var $obj = this;
+        var parentPaddingTop = parseInt($obj.parent().css('padding-top'));
+        var startOffset = $obj.parent().offset().top;
+        var opts = $.extend({ startOffset: startOffset, offsetY: parentPaddingTop, duration: 200, easing: 'jswing', lockBottom:true }, options);
+        if(opts.lockBottom){
+            var bottomPos = $obj.parent().height() - $obj.height() + parentPaddingTop
+            if( bottomPos < 0 )
+                bottomPos = 0;
+        }
+        $(window).scroll(function() {
+            $obj.stop();
+            var pastStartOffset = $(document).scrollTop() > opts.startOffset;
+            var objFartherThanTopPos = $obj.offset().top > startOffset;
+            var objSmallerThanWindow = $obj.outerHeight() < $(window).height();
+            // if window scrolled down more than startOffset OR obj position is greater than
+            // the top position possible (+ offsetY) AND window size must be bigger than Obj size
+            if( (pastStartOffset || objFartherThanTopPos) && objSmallerThanWindow ){
+                var newpos = ($(document).scrollTop() -startOffset + opts.offsetY );
+                if ( $(document).scrollTop() < opts.startOffset ) { // if window scrolled < starting offset, then reset Obj position (opts.offsetY);
+                    newpos = parentPaddingTop;
+                }
+                //if(newpos > opts.startOffset) {
+                //	newpos = newpos - opts.startOffset;
+                //}
+                if (newpos > bottomPos) {
+                    newpos = bottomPos;
+                }
+                if ( $(window).width() < opts.minWidth ) {
+                    newpos = 0;
+                }
+                $obj.animate({ 'margin-top': newpos }, opts.duration, opts.easing );
+            }
+
+        });
+    };
+
+})(jQuery);
+
+// Fire it off
+
+jQuery(document).ready(function($) {
+    $('aside#article-meta').creepyUncle({duration: 400, startOffset: '350px'});
+});

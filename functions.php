@@ -92,6 +92,17 @@ function wpr_post_featured_content() {
 	
 }
 
+add_action('wp_enqueue_scripts', 'wpr_js_plugins');
+
+/**
+ * Add Vertically Floating Meta-Box Functionality
+ *
+ * @author Noel Tock (Plugin itself: Luc De Brouwer)
+ */
+function wpr_js_plugins() {
+    wp_enqueue_script('js_plugins', CHILD_URL . '/html/js/plugins.js', array( 'jquery' ) );
+}
+
 
 add_action('wp_enqueue_scripts', 'wpr_responsive_video');
 /**
