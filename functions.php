@@ -100,7 +100,7 @@ add_action('wp_enqueue_scripts', 'wpr_js_plugins');
  * @author Noel Tock (Plugin itself: Luc De Brouwer)
  */
 function wpr_js_plugins() {
-    wp_enqueue_script('js_plugins', CHILD_URL . '/html/js/plugins.js', array( 'jquery' ) );
+    wp_enqueue_script('js_plugins', CHILD_URL . '/lib/js/plugins.js', array( 'jquery' ) );
 }
 
 
