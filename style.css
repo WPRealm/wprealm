@@ -1002,6 +1002,13 @@ ul.menu li.sfHover ul,
 	padding: 0;
 }
 
+.lead {
+	color: #aaa;
+	border-bottom: 2px solid #eee;
+	padding: 15px 0;
+	margin-bottom: 15px;
+}
+
 .entry-content {
 	overflow: hidden;
 	padding: 0 25px;

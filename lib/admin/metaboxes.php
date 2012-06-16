@@ -68,9 +68,6 @@ function wpr_metaboxes( array $meta_boxes ) {
 
 
 
-
-
-
 add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
 /**
  * Initialize the metabox class.
@@ -81,5 +78,3 @@ function cmb_initialize_cmb_meta_boxes() {
 		require_once CHILD_DIR . '/lib/metabox/init.php';
 
 }
-
-

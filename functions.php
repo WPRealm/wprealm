@@ -122,6 +122,20 @@ function wpr_responsive_video() {
 	);
 }
 
+add_action( 'genesis_post_content', 'wpr_adding_lead_text_above_content', 1 );
+/**
+ * wpr_adding_lead_text_above_content function.
+ * 
+ * @access public
+ * @return void
+ */
+function wpr_adding_lead_text_above_content() {
+	?>
+	<section class="lead">
+		<?php genesis_custom_field( '_wpr_lead_text' ); ?>
+	</section>
+	<?php
+}
 
 add_action( 'genesis_before_sidebar_widget_area', 'wpr_sidebar_author_meta' );
 /**
