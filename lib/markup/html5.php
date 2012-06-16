@@ -112,7 +112,7 @@ function wpr_html5_genesis_standard_loop() {
 }
 
 remove_action( 'genesis_before_post_content', 'genesis_post_info' );
-add_action( 'genesis_before_post_content', 'wpr_post_info' );
+//add_action( 'genesis_before_post_content', 'wpr_post_info' );
 /**
  * Custom Post-Info with Google Rich Snippet support
  *
