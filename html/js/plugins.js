@@ -262,5 +262,5 @@ jQuery.extend( jQuery.easing,
 // Fire it off
 
 jQuery(document).ready(function($) {
-    $('aside#article-meta').creepyUncle({duration: 400, startOffset: '350px'});
+    $('aside#article-meta').creepyUncle({duration: 400, startOffset: 100});
 });
