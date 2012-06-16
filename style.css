@@ -645,7 +645,7 @@ body {
 	line-height: 1.25;
 	margin: 0;
 	background: url('images/wprealm-logo.png') 3px no-repeat;
-	padding: 0 0 0 35px;
+	padding: 0 20px 0 35px;
 	text-transform: uppercase;
 }
 
@@ -881,7 +881,7 @@ nav#select-nav select {
 
 #header-nav ul li {
 	float: left;
-	padding: 0 30px;
+	padding: 0 20px;
 }
 
 #header-nav ul li.first {
@@ -890,7 +890,8 @@ nav#select-nav select {
 
 #header-nav ul li a {
 	line-height: 5rem;
-	font-size: 1.2rem;
+	font-size: 14px;
+	font-size: 1.4rem;
 	color: #999;
 	text-decoration: none;
 	text-shadow: 2px 2px 1px #000000;
