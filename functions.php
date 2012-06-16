@@ -249,3 +249,95 @@ function wpr_oembed_transparency( $html, $url, $attr, $post_id ) {
 		return $html;
 	}
 }
+
+remove_action( 'genesis_header', 'genesis_do_header' );
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_header', 'wpr_header' );
+/**
+ * Echo the WP Realm header, including the #title-area div,
+ * along with #title and #description, as well as the .widget-area.
+ *
+ * Calls the genesis_site_title, genesis_site_description and
+ * wpr_header_nav actions.
+ *
+ * @access public
+ * @author Luc De Brouwer
+ */
+function wpr_header() {
+
+	echo '<div id="title-area">';
+	do_action( 'genesis_site_title' );
+	do_action( 'genesis_site_description' );
+	echo '</div><!-- end #title-area -->';
+	do_action( 'wpr_header_nav' );
+
+}
+
+add_action( 'wpr_header_nav', 'wpr_header_nav' );
+/**
+ * Echoes the "Primary Navigation" menu.
+ *
+ * @access public
+ * @author Luc De Brouwer
+ */
+function wpr_header_nav( ) {
+	$nav = '';
+	if ( has_nav_menu( 'primary' ) ) {
+		$args = array(
+			'theme_location' => 'primary',
+			'container' => '',
+			'echo' => 0,
+		);
+	
+		$nav = wp_nav_menu( $args );
+	}
+	echo '<nav id="header-nav">' . $nav . '</nav>';
+}
+
+add_action( 'genesis_after_header', 'wpr_select_nav' );
+/**
+ * Echoes the "Primary Navigation" menu as a select dropdown.
+ *
+ * @access public
+ * @author Luc De Brouwer
+ */
+function wpr_select_nav( ) {
+	$nav = '';
+	if ( has_nav_menu( 'primary' ) ) {
+		$args = array(
+			'theme_location' => 'primary',
+			'container' => '',
+			'echo' => 0,
+			'walker' => new wpr_Walker_Nav_Menu_Dropdown( ),
+			'items_wrap' => '<select><option value="">- Choose -</option>%3$s</select>',
+		);
+	
+		$nav = wp_nav_menu( $args );
+	}
+	echo '<nav id="select-nav">' . $nav . '</nav>';
+}
+
+/**
+ * Custom walker to generate a <select>-based menu.
+ *
+ * @access public
+ * @author Luc De Brouwer
+ */
+class wpr_Walker_Nav_Menu_Dropdown extends Walker_Nav_Menu {
+	function start_lvl(&$output, $depth){
+		$indent = str_repeat( "\t", $depth );
+	}
+
+	function end_lvl(&$output, $depth){
+		$indent = str_repeat( "\t", $depth );
+	}
+
+	function start_el( &$output, $item, $depth, $args ){
+		$item->title = str_repeat( "&nbsp;", $depth * 4 ).$item->title;
+		$output .= '<option value="' . $item->url . '">' . $item->title;
+	}
+
+	function end_el( &$output, $item, $depth ){
+	  $output .= "</option>\n";
+	}
+}

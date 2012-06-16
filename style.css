@@ -635,7 +635,7 @@ body {
 	float: left;
 	overflow: hidden;
 	padding: 17px 0 0;
-	width: 400px;
+	//width: 400px;
 }
 
 #title {
@@ -697,14 +697,14 @@ body {
 .header-full-width #title-area,
 .header-full-width #title,
 .header-full-width #title a {
-	width: 100%;
+	//width: 100%;
 }
 
 
 /* Header / Primary / Secondary Navigation
 ------------------------------------------------------------ */
 
-.menu-primary,
+/*.menu-primary,
 .menu-secondary,
 #header .menu {
 	clear: both;
@@ -860,12 +860,51 @@ ul.menu li.sfHover ul,
 	text-indent: -9999px;
 	top: 10px;
 	width: 16px;
-}
+}*/
 
 #wpadminbar li:hover ul ul {
 	left: 0;
 }
 
+nav#select-nav {
+	display: none;
+}
+
+nav#select-nav select {
+	width: 100%;
+}
+
+#header-nav {
+	float: left;
+	padding: 17px 0 0;
+}
+
+#header-nav ul li {
+	float: left;
+	padding: 0 30px;
+}
+
+#header-nav ul li.first {
+	padding-left: 60px;
+}
+
+#header-nav ul li a {
+	line-height: 5rem;
+	font-size: 1.2rem;
+	color: #999;
+	text-decoration: none;
+	text-shadow: 2px 2px 1px #000000;
+	filter: dropshadow(color=#000000, offx=2, offy=2);
+}
+
+#header-nav ul li a:hover, #header-nav ul li a.active {
+	-webkit-transition: color 1s ease;
+	-moz-transition: color 1s ease;
+	-ms-transition: color 1s ease;
+	-o-transition: color 1s ease;
+	transition: color 1s ease;
+	color: #f60;
+}
 
 /* Primary Navigation Extras
 ------------------------------------------------------------ */
@@ -2369,7 +2408,7 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 
 @media only screen and (max-width: 600px) {
 
-	.menu-primary li,
+/*	.menu-primary li,
 	.menu-primary li ul,
 	.menu-primary li ul a,
 	.menu-secondary li,
@@ -2379,7 +2418,7 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 	#header .menu li ul,
 	#header .menu li ul a {
 		width: 100%;
-	}
+	}*/
 	
 	.five-sixths,
 	.four-fifths,
@@ -2400,7 +2439,7 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 		width: 100%;
 	}
 
-	.menu-primary li a,
+/*	.menu-primary li a,
 	.menu-secondary li a,
 	#header .menu li a {
 		margin: 0;
@@ -2453,6 +2492,14 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 	.menu-secondary li ul ul,
 	#header .menu li ul ul {
 		margin: 0;
+	}*/
+
+	nav#select-nav {
+		display: block;
+	}
+
+	nav#header-nav {
+		display: none;
 	}
 
 }
@@ -2481,7 +2528,6 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 	#footer-widgets .wrap,
 	#header .widget-area,
 	#sidebar-alt,
-	#title-area,
 	#wrap {
 		width: 100%;
 	}
@@ -2504,6 +2550,7 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 
 	#title-area {
 		padding: 10px 0;
+		float: left;
 	}
 
 	#description,
