@@ -88,7 +88,7 @@ function wpr_post_featured_content() {
 		
 	);
 	
-	echo '<img class="feature-image" src=" '.$image_url . '">';
+	echo '<img class="feature-content" src=" '.$image_url . '">';
 	
 }
 

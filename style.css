@@ -988,7 +988,7 @@ ul.menu li.sfHover ul,
 
 .hentry {
 	background-color: #fff;
-	border: #eee;
+	border: 1px solid #eee;
 	box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 3px;
 	-moz-box-shadow: rgba(0,0,0, 0.15) 0px 0px 3px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 3px;
@@ -1037,6 +1037,14 @@ p.subscribe-to-comments {
 	margin: 0 0 25px;
 }
 
+.feature-content {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+}
 
 /* Column Classes
 ------------------------------------------------------------ */
@@ -1275,23 +1283,20 @@ h5 {
 	font-size: 1.4rem;
 	padding: 5px 25px 10px;
 	background: #fafafa;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
 }
-
-img.avatar {
-	border-radius: 50%;
-	-khtml-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-webkit-border-radius: 50%;
-	max-width: 100% !important;
-}
-
 
 /* Article Sidebar Meta
 ------------------------------------------------------------ */
 
 #article-meta {
 	background-color: #fff;
-	border: #eee;
+	border: 1px solid #eee;
 	box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 3px;
 	-moz-box-shadow: rgba(0,0,0, 0.15) 0px 0px 3px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 3px;
@@ -1400,6 +1405,14 @@ img {
 	background-color: #fff;
 	float: left;
 	margin: 0 10px 0 0;
+}
+
+img.avatar {
+	border-radius: 50%;
+	-khtml-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	max-width: 100% !important;
 }
 
 .post-image {
@@ -1905,15 +1918,24 @@ input:hover[type="submit"] {
 .alt,
 .depth-1,
 .even {
-	border: 1px solid #ddd;
+	border: 1px solid #eee;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 3px;
+	-moz-box-shadow: rgba(0,0,0, 0.15) 0px 0px 3px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
 
-li.comment{
+li.comment {
 	position:relative;
 	margin: 15px 0 5px 120px;
 }
 
-.comment-author{
+.comment-author {
 	position: absolute;
 	left: -115px;
 	width: 200px;
@@ -1921,9 +1943,10 @@ li.comment{
 	font-size: 1.4rem;
 }
 
-.says{
+.says {
 	display:none;
 }
+
 /* Tables
 ------------------------------------------------------------ */
  
