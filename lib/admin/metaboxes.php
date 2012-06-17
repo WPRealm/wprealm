@@ -21,7 +21,7 @@ function wpr_metaboxes( array $meta_boxes ) {
 	$prefix = '_wpr_';
 
 	/**
-	 * Featured Video Metabox
+	 * Post Lead Box
 	 */
 	$meta_boxes[] = array(
 		'id'         => 'post_lead',
@@ -37,6 +37,50 @@ function wpr_metaboxes( array $meta_boxes ) {
 				'id'   => $prefix . 'lead_text',
 				'type'    => 'wysiwyg',
 				'options' => array(	'textarea_rows' => 5, ),
+			),
+		)
+	);
+	
+	/**
+	 * Event / Map metabox
+	 */
+	$meta_boxes[] = array(
+		'id'         => 'event_map',
+		'title'      => 'Event data',
+		'pages'      => array( 'post' ), // Post type
+		'context'    => 'normal',
+		'priority'   => 'core',
+		'show_names' => true, // Show field names on the left
+		'fields' => array(
+			array(
+				'name' => 'Event Title',
+				'desc' => 'Title of the event',
+				'id'   => $prefix . 'event_title',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Event Location',
+				'desc' => 'Event location',
+				'id'   => $prefix . 'event_location',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Event date(s)',
+				'desc' => 'Date of the Event',
+				'id'   => $prefix . 'event_date',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Event Link',
+				'desc' => 'Link to the website of the Event',
+				'id'   => $prefix . 'event_link',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Event description',
+				'desc' => 'Description of the Event',
+				'id'   => $prefix . 'event_description',
+				'type' => 'text',
 			),
 		)
 	);
