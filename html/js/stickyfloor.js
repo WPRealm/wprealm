@@ -78,9 +78,9 @@
 
                 }
 
-                $clone.css({
+                $clone.stop().animate({
                     'margin-top': marginTop + 'px'
-                });
+                }, 'slow');
 
             };
 
