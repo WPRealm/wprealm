@@ -376,3 +376,15 @@ function wpr_custom_favicon() {
     echo "\n".'<!--The Favicon-->'."\n";
     echo '<link rel="Shortcut Icon" href="'. esc_url( $favicon ). '" type="image/x-icon" />'."\n";
 }
+
+add_filter( 'the_content_more_link', 'custom_read_more_link' );
+/**
+ * Modify the WordPress read more link 
+ * 
+ * @access public
+ * @return void
+ * @link http://www.studiopress.com/tutorials/post-excerpts
+ */
+function custom_read_more_link() {
+    return '<a class="more-link" href="' . get_permalink() . '"> Keep reading &raquo;</a>';
+}
