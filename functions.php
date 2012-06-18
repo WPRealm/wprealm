@@ -388,3 +388,55 @@ add_filter( 'the_content_more_link', 'custom_read_more_link' );
 function custom_read_more_link() {
     return ' <a class="more-link" href="' . get_permalink() . '">Keep reading &raquo;</a>';
 }
+
+add_filter( 'genesis_ping_list_args', 'wpr_ping_list_args' );
+/**
+ * Take the existing arguments, and amend one that specifies a custom callback.
+ * 
+ * Tap into the list of arguments applied at genesis/lib/functions/comments.php.
+ * 
+ * @see child_list_pings() Callback for displaying trackbacks.
+ *
+ * @author Gary Jones
+ * @link   http://code.garyjones.co.uk/change-trackback-format/
+ * 
+ * @param array $args Existing ping list arguments.
+ *
+ * @return array Amended ping list arguments.
+ */
+function wpr_ping_list_args( $args ) {
+	
+	$custom_args = array( 'callback' => 'wpr_list_pings' );
+
+	return array_merge( $args, $custom_args );
+	
+}
+
+/**
+ * Echo the appearance of a single trackback.
+ * 
+ * Code below strips away most details about the ping, and just leaves a link to
+ * the source of the ping, with the source title as the displayed text. 
+ * 
+ * @author Gary Jones
+ * @link   http://code.garyjones.co.uk/change-trackback-format/
+ * 
+ * @param object  $comment Comment object.
+ * @param array   $args    Comment arguments.
+ * @param integer $depth   Current comment nested depth.
+ */
+function wpr_list_pings( $comment, $args, $depth ) {
+
+	$GLOBALS['comment'] = $comment;
+	?>
+	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+		<div id="comment-<?php comment_ID(); ?>">
+			<div class="comment-author vcard">
+				<?php echo get_avatar( $comment, $size = '48', $default = '<path_to_url>' ); ?>
+				<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link() ) ?>
+			</div>
+		</div>
+	</li>
+	<?php
+
+}
