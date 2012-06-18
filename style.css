@@ -5,7 +5,7 @@
     Author: WP Realm team
     Author URI: http://wprealm.com/
  
-    Version: 0.8.7
+    Version: 0.9.2
  
     Template: genesis
     Template Version: 1.8
@@ -575,12 +575,12 @@ ol li {
 
 a,
 a:visited {
-	color: #ff6600;
+	color: #f60;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #0d72c7;
+	color: #0af;
 	text-decoration: underline;
 }
 
@@ -1368,6 +1368,11 @@ h5 {
 	display: block;
 }
 
+#article-meta .updated {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
 /* Author Box
 ------------------------------------------------------------ */
 
@@ -1408,7 +1413,7 @@ h5 {
 
 .archive-page {
 	float: left;
-	padding: 20px 0 0;
+
 	width: 45%;
 }
 

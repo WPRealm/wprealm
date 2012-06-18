@@ -144,32 +144,10 @@ function wpr_post_info() {
 		$published_compare = get_the_date( 'Y-m-d' );
 		$modified_compare = the_modified_date( 'Y-m-d', '', '', FALSE ); 
 			if ( $published_compare < $modified_compare ) {
-				echo '<span class="updated"><em>&middot; (Updated: ' . $modified . ')</em></span>';
+				echo '<span class="updated"><em>(Updated: ' . $modified . ')</em></span>';
 			} ?>
 	</div>
 <?php }
-
-remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
-add_action( 'genesis_sidebar', 'wpr_genesis_do_sidebar' );
-/**
- * Echo primary sidebar default content.
- *
- * @since 1.0
- */
-function wpr_genesis_do_sidebar() {
-
-	if ( ! dynamic_sidebar( 'sidebar' ) ) {
-		echo '<aside class="widget widget_text"><div class="widget-wrap">';
-			echo '<h4 class="widgettitle">';
-				_e( 'Our Sidebar Widget Area', 'genesis' );
-			echo '</h4>';
-			echo '<div class="textwidget"><p>';
-				printf( __( 'This is Our Sidebar Widget Area. You can add content to this area by visiting your <a href="%s">Widgets Panel</a> and adding new widgets to this area.', 'genesis' ), admin_url( 'widgets.php' ) );
-			echo '</p></div>';
-		echo '</div></aside>';
-	}
-
-}
 
 remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
 add_action( 'genesis_footer', 'wpr_genesis_footer_markup_open', 5 );

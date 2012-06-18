@@ -341,3 +341,21 @@ class wpr_Walker_Nav_Menu_Dropdown extends Walker_Nav_Menu {
 	  $output .= "</option>\n";
 	}
 }
+
+add_filter( 'genesis_post_meta', 'wpr_post_meta_filter' );
+/**
+ * Customize the post meta function.
+ * 
+ * @access public
+ * @param mixed $post_meta
+ * @return void
+ */
+function wpr_post_meta_filter( $post_meta ) {
+if ( ! is_page() ) {
+    
+    $post_meta = '[post_categories] [post_tags]';
+    
+    return $post_meta;
+	
+	}
+}
