@@ -386,5 +386,5 @@ add_filter( 'the_content_more_link', 'custom_read_more_link' );
  * @link http://www.studiopress.com/tutorials/post-excerpts
  */
 function custom_read_more_link() {
-    return '<a class="more-link" href="' . get_permalink() . '"> Keep reading &raquo;</a>';
+    return ' <a class="more-link" href="' . get_permalink() . '">Keep reading &raquo;</a>';
 }
