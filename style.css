@@ -1233,6 +1233,7 @@ h2 a:visited {
 }
 
 h2 a:hover {
+	color: #0af;
 	text-decoration: none;
 }
 

@@ -92,12 +92,12 @@ function wpr_post_featured_content() {
 	
 }
 
-add_action('wp_enqueue_scripts', 'wpr_js_plugins');
-
+//add_action('wp_enqueue_scripts', 'wpr_js_plugins');
 /**
  * Add Sticky Meta-Box Functionality
  *
  * @author Noel Tock
+ * @todo make it behave properly.
  */
 function wpr_js_plugins() {
     wp_enqueue_script('js_plugins', CHILD_URL . '/html/js/stickyfloor.js', array( 'jquery' ) );
@@ -130,7 +130,7 @@ add_action( 'genesis_post_content', 'wpr_adding_lead_text_above_content', 1 );
  * @return void
  */
 function wpr_adding_lead_text_above_content() {
-	if ( is_single ()) {
+	if ( ! is_page() ) {
 	?>
 	<section class="lead">
 		<?php genesis_custom_field( '_wpr_lead_text' ); ?>
