@@ -361,3 +361,18 @@ if ( ! is_page() ) {
 	
 	}
 }
+
+remove_action( 'genesis_meta', 'genesis_load_favicon' );
+add_action( 'genesis_meta', 'wpr_custom_favicon' );
+/**
+ * Remove Genesis Favicon and Replace with own
+ * 
+ * @access public
+ * @return void
+ */
+function wpr_custom_favicon() {
+    $favicon = 'http://wprealm.com/favicon.ico';
+    
+    echo "\n".'<!--The Favicon-->'."\n";
+    echo '<link rel="Shortcut Icon" href="'. esc_url( $favicon ). '" type="image/x-icon" />'."\n";
+}
