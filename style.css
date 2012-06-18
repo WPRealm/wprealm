@@ -1474,7 +1474,7 @@ img.avatar {
 .comment-list li .avatar {
 	background-color: #fff;
 	display: block;
-	margin: 5px 0 0 10px;
+	margin: 5px 0 10px 10px;
 }
 
 img.centered,
@@ -1989,9 +1989,14 @@ li.comment {
 .comment-author {
 	position: absolute;
 	left: -115px;
-	width: 200px;
+	width: 100px;
 	font-size: 14px;
 	font-size: 1.4rem;
+	line-height: 1.5em;
+}
+
+.comment-author img{
+	
 }
 
 .says {
