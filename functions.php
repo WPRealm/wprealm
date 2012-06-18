@@ -130,11 +130,13 @@ add_action( 'genesis_post_content', 'wpr_adding_lead_text_above_content', 1 );
  * @return void
  */
 function wpr_adding_lead_text_above_content() {
+	if ( is_single ()) {
 	?>
 	<section class="lead">
 		<?php genesis_custom_field( '_wpr_lead_text' ); ?>
 	</section>
 	<?php
+	}
 }
 
 add_action( 'genesis_before_sidebar_widget_area', 'wpr_sidebar_author_meta' );
