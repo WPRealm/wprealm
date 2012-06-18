@@ -1927,6 +1927,7 @@ input:hover[type="submit"] {
 	font-size: 14px;
 	font-size: 1.4rem;
 	margin: 0 0 20px;
+	font-weight: 400;
 }
 
 .comment-list cite,
