@@ -646,6 +646,7 @@ body {
 	margin: 0;
 	padding: 0 20px 0 0;
 	font-weight:200;
+	text-shadow: -1px -1px 0px #111;
 }
 
 #title a,
