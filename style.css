@@ -1912,7 +1912,7 @@ input:hover[type="submit"] {
 
 .comment-list li,
 .ping-list li {
-	font-weight: 700;
+	font-weight: 400;
 	list-style-type: none;
 	margin: 15px 0 5px;
 	padding: 10px 15px;
