@@ -107,6 +107,17 @@ function wpr_js_plugins() {
     wp_enqueue_script('js_plugins', CHILD_URL . '/html/js/stickyfloor.js', array( 'jquery' ) );
 }
 
+add_action('wp_enqueue_scripts', 'wpr_js_dropdownmenu');
+/**
+ * Add functionality to make the <select>-box menu work.
+ *
+ * @access public
+ * @author Luc De Brouwer
+ */
+function wpr_js_dropdownmenu() {
+    wp_enqueue_script('js_plugins', CHILD_URL . '/lib/js/dropdownmenu.js', array( 'jquery' ) );
+}
+
 
 add_action('wp_enqueue_scripts', 'wpr_responsive_video');
 /**
