@@ -115,7 +115,7 @@ add_action('wp_enqueue_scripts', 'wpr_js_dropdownmenu');
  * @author Luc De Brouwer
  */
 function wpr_js_dropdownmenu() {
-    wp_enqueue_script('js_plugins', CHILD_URL . '/lib/js/dropdownmenu.js', array( 'jquery' ) );
+    wp_enqueue_script('js_select', CHILD_URL . '/lib/js/dropdownmenu.js', array( 'jquery' ) );
 }
 
 
