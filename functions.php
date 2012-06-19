@@ -51,7 +51,9 @@ add_action( 'genesis_before_post_title', 'wpr_post_featured_content' );
  */
 function wpr_post_featured_content() {
 	global $post;
-
+	
+	if( ! is_page() ) {
+	
 
 	// Rafa, this is for your gmap as featured image
 
@@ -89,6 +91,8 @@ function wpr_post_featured_content() {
 	);
 	
 	echo '<img class="feature-content" src=" '.$image_url . '">';
+	
+	}
 	
 }
 
