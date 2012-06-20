@@ -5,7 +5,7 @@
     Author: WP Realm team
     Author URI: http://wprealm.com/
  
-    Version: 0.9.2
+    Version: 0.9.3
  
     Template: genesis
     Template Version: 1.8
@@ -1296,6 +1296,11 @@ h5 {
 .entry-content ul li {
 	list-style-type: square;
 	margin: 0 0 0 30px;
+	padding: 0 0 10px;
+}
+
+.archive-page ul li ul li,
+.entry-content ul li ul li {
 	padding: 0;
 }
 
