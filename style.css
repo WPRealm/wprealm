@@ -1513,6 +1513,10 @@ img.alignright {
 	margin: 0 0 10px 15px;
 }
 
+img.spacer {
+	margin-right: 75px;
+}
+
 .wp-caption {
 	padding: 5px;
 	text-align: center;
