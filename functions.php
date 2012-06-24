@@ -89,11 +89,11 @@ function wpr_post_featured_content() {
 		) 
 		
 	);
-	
-	echo '<img class="feature-content" src=" '.$image_url . '">';
-	
+
+	echo '<img class="feature-content" src="'.$image_url . '" alt="' . esc_attr( $post->post_title ) . '" />';
+
 	}
-	
+
 }
 
 //add_action('wp_enqueue_scripts', 'wpr_js_plugins');
