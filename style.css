@@ -2013,6 +2013,12 @@ li.comment {
 	display:none;
 }
 
+.ping-list .comment-author {
+	position: inherit;
+	left: 0;
+	width: 100%;
+}
+
 /* Tables
 ------------------------------------------------------------ */
  
