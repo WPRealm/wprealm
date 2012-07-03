@@ -7,10 +7,14 @@ require_once( get_template_directory() . '/lib/init.php' );
 define( 'CHILD_THEME_NAME', 'WP Realm' );
 define( 'CHILD_THEME_URL', 'http://wprealm.com' );
 
+/** Add support for post formats */
+add_theme_support( 'post-formats', array( 'aside', 'chat', 'image', 'link', 'quote', 'status', 'video' ) );
 
 /** Loading HTML5 features*/
 include 'lib/markup/html5.php';
 
+/** Loading Crowd Favorite's Post Formats */
+require_once( 'lib/plugins/wp-post-formats/cf-post-formats.php' );
 
 /** WP Thumb even better then 'resize on demand' */
 if( !class_exists( 'WP_Thumb' ) ){
