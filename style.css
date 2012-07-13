@@ -1334,11 +1334,6 @@ h5 {
 	padding: 15px 25px 0;
 }
 
-span.post-comments {
-	float: right;
-	
-}
-
 /* Post Meta
 ------------------------------------------------------------ */
 
@@ -1355,6 +1350,11 @@ span.post-comments {
 	-moz-border-radius-bottomright: 3px;
 	-webkit-border-bottom-left-radius: 3px;
 	-webkit-border-bottom-right-radius: 3px;
+}
+
+.post-meta span.post-comments {
+	float: right;	
+	
 }
 
 /* Article Sidebar Meta

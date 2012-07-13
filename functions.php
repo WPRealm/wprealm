@@ -509,3 +509,19 @@ function wpr_list_pings( $comment, $args, $depth ) {
 	<?php
 
 }
+
+add_filter( 'post_link', 'wpr_link_filter', 10, 2 );
+/**
+ * sd_link_filter function.
+ * 
+ * @access public
+ * @param mixed $link
+ * @param mixed $post
+ * @return void
+ */
+function wpr_link_filter( $link, $post ) {
+     if ( has_post_format( 'link', $post ) && get_post_meta( $post->ID, '_format_link_url', true ) ) {
+          $link = get_post_meta( $post->ID, '_format_link_url', true );
+     }
+     return $link;
+}
