@@ -2452,6 +2452,9 @@ color: #ccc;
 .format-quote .entry-content{
 	margin-top:35px;
 }
+.format-link .entry-content{
+	margin-left:0px;
+}
 /* Responsive Design
 ------------------------------------------------------------ */
 
