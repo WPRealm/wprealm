@@ -115,7 +115,7 @@ function wpr_post_featured_content() {
 	if( has_post_format( 'status' ) ) {
 		return;
 	} else
-	echo '<img class="feature-content" src="'.$image_url . '" alt="' . esc_attr( $post->post_title ) . '" />';
+	echo '<a href="' . get_permalink() . '"><img class="feature-content" src="'.$image_url . '" alt="' . esc_attr( $post->post_title ) . '" /></a>';
 
 	}
 
@@ -393,12 +393,19 @@ add_filter( 'genesis_post_meta', 'wpr_post_meta_filter' );
  * @return void
  */
 function wpr_post_meta_filter( $post_meta ) {
-if ( ! is_page() ) {
+	if ( is_singular() ) {
     
     $post_meta = '[post_categories] [post_tags]';
     
     return $post_meta;
 	
+	}
+	if ( ! is_singular() ) {
+	
+	$post_meta = '[post_categories] [post_comments]';
+    
+    return $post_meta;	
+		
 	}
 }
 

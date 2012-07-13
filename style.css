@@ -545,8 +545,17 @@ textarea,
 .sticky,
 .taxonomy-description,
 .wp-caption {
-	background-color: #f5f5f5;
+	background-color: #fafafa;
 	border: 1px solid #ddd;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 3px;
+	-moz-box-shadow: rgba(0,0,0, 0.15) 0px 0px 3px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
 
 input,
@@ -1323,6 +1332,11 @@ h5 {
 	font-size: 1.4rem;
 	margin: 0 0 15px;
 	padding: 15px 25px 0;
+}
+
+span.post-comments {
+	float: right;
+	
 }
 
 /* Post Meta
