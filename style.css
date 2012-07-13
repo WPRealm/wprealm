@@ -2442,6 +2442,13 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 .icon-paste:before                { content: "\f0ea"; }
 
 .icon-user-md:before              { content: "\f200"; }
+.post i{
+font-size: 60px;
+font-size: 6.0rem;
+float: left;
+margin: 40px 20px;
+color: #ccc;
+}
 
 /* Responsive Design
 ------------------------------------------------------------ */
