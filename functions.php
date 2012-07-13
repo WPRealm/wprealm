@@ -521,17 +521,33 @@ function wpr_link_filter( $link, $post ) {
      return $link;
 }
 
-add_action( 'genesis_before_post_title', 'wpr_add_link_post_format', 1 );
+add_action( 'genesis_before_post_title', 'wpr_add_link_post_format_icon' );
 /**
- * wpr_add_link_post_format function.
+ * Add post format link icon.
  * 
  * @access public
  * @return void
  */
-function wpr_add_link_post_format() {
+function wpr_add_link_post_format_icon() {
 	if ( has_post_format( 'link', $post ) ) {
           ?>
           <i class="icon-link"></i>
+          <?php
+     }
+	
+}
+
+add_action( 'genesis_before_post_title', 'wpr_add_quote_post_format_icon' );
+/**
+ * Add post format quote icon.
+ * 
+ * @access public
+ * @return void
+ */
+function wpr_add_quote_post_format_icon() {
+	if ( has_post_format( 'quote', $post ) ) {
+          ?>
+          <i class="icon-bullhorn"></i>
           <?php
      }
 	
