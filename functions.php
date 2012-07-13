@@ -514,8 +514,25 @@ add_filter( 'post_link', 'wpr_link_filter', 10, 2 );
  * @return void
  */
 function wpr_link_filter( $link, $post ) {
+     // check to see if the post format is a link and if it has the proper custom field 
      if ( has_post_format( 'link', $post ) && get_post_meta( $post->ID, '_format_link_url', true ) ) {
           $link = get_post_meta( $post->ID, '_format_link_url', true );
      }
      return $link;
+}
+
+add_action( 'genesis_before_post_title', 'wpr_add_link_post_format', 1 );
+/**
+ * wpr_add_link_post_format function.
+ * 
+ * @access public
+ * @return void
+ */
+function wpr_add_link_post_format() {
+	if ( has_post_format( 'link', $post ) ) {
+          ?>
+          <i class="icon-link"></i>
+          <?php
+     }
+	
 }

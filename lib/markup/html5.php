@@ -80,8 +80,8 @@ function wpr_html5_genesis_standard_loop() {
 	?>
 	<article <?php post_class(); ?>> 
 		
+		<?php do_action( 'genesis_before_post_title' ); ?>
 		<header>
-			<?php do_action( 'genesis_before_post_title' ); ?>
 			<?php do_action( 'genesis_post_title' ); ?>
 			<?php do_action( 'genesis_after_post_title' ); ?>
 
