@@ -2449,7 +2449,9 @@ float: left;
 margin: 40px 20px;
 color: #ccc;
 }
-
+.format-quote .entry-content{
+	margin-top:20px;
+}
 /* Responsive Design
 ------------------------------------------------------------ */
 
