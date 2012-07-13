@@ -170,6 +170,28 @@ add_action( 'genesis_post_content', 'wpr_adding_lead_text_above_content', 1 );
  * @return void
  */
 function wpr_adding_lead_text_above_content() {
+	if( has_post_format( 'aside' ) ) {
+		return;
+	} else
+	if( has_post_format( 'chat' ) ) {
+		return;
+	} else 
+	if( has_post_format( 'link' ) ) {
+		return;
+	} else
+	if( has_post_format( 'video' ) ) {
+		return;
+	} else
+	if( has_post_format( 'image' ) ) {
+		return;
+	} else
+	if( has_post_format( 'quote' ) ) {
+		return;
+	} else 
+	if( has_post_format( 'status' ) ) {
+		return;
+	} else
+	
 	if ( ! is_page() ) {
 	?>
 	<section class="lead">
