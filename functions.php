@@ -180,6 +180,7 @@ function wpr_adding_lead_text_above_content() {
 		return;
 	} else
 	if( has_post_format( 'quote' ) ) {
+	
 		return;
 	} else 
 	if( has_post_format( 'status' ) ) {
@@ -529,10 +530,11 @@ add_action( 'genesis_before_post_title', 'wpr_add_link_post_format_icon' );
  * @return void
  */
 function wpr_add_link_post_format_icon() {
-	if ( has_post_format( 'link', $post ) ) {
-          ?>
-          <i class="icon-link"></i>
-          <?php
+	
+	if ( has_post_format( 'link' ) ) {
+		?>
+		<i class="icon-link"></i>
+		<?php
      }
 	
 }
@@ -545,10 +547,30 @@ add_action( 'genesis_before_post_title', 'wpr_add_quote_post_format_icon' );
  * @return void
  */
 function wpr_add_quote_post_format_icon() {
-	if ( has_post_format( 'quote', $post ) ) {
-          ?>
-          <i class="icon-bullhorn"></i>
-          <?php
+	
+	if ( has_post_format( 'quote' ) ) {
+		?>
+		<i class="icon-bullhorn"></i>
+		<?php
      }
+	
+}
+
+add_action( 'genesis_before_post', 'wpr_remove_post_title_on_quote_post_format' );
+/**
+ * wpr_add_quote_post_format_icon function.
+ * 
+ * @access public
+ * @return void
+ */
+function wpr_remove_post_title_on_quote_post_format() {
+	
+	if ( has_post_format( 'quote' ) ) {
+	
+   	remove_action( 'genesis_post_title', 'genesis_do_post_title' );
+   	} else {
+	add_action( 'genesis_post_title', 'genesis_do_post_title' );     
+	     
+	}
 	
 }
