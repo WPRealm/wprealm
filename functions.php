@@ -10,21 +10,16 @@ define( 'CHILD_THEME_URL', 'http://wprealm.com' );
 /** Add support for post formats */
 add_theme_support( 'post-formats', array( 'aside', 'chat', 'image', 'link', 'quote', 'status', 'video' ) );
 
-/** Loading HTML5 features*/
+/** Loading HTML5 features */
 include 'lib/markup/html5.php';
-
-/** Loading Crowd Favorite's Post Formats */
-require_once( 'lib/plugins/wp-post-formats/cf-post-formats.php' );
 
 /** WP Thumb even better then 'resize on demand' */
 if( !class_exists( 'WP_Thumb' ) ){
    include 'lib/plugins/WPThumb/wpthumb.php';
 }
 
-
 /** Metaboxes are here */
 include 'lib/admin/metaboxes.php';
-
 
 add_action( 'genesis_meta', 'add_viewport_meta_tag' );
 /**
@@ -36,7 +31,6 @@ add_action( 'genesis_meta', 'add_viewport_meta_tag' );
 function add_viewport_meta_tag() {
     echo '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>';
 }
-
 
 /** Add support for 3-column footer widgets */
 add_theme_support( 'genesis-footer-widgets', 3 );
@@ -512,7 +506,7 @@ function wpr_list_pings( $comment, $args, $depth ) {
 
 add_filter( 'post_link', 'wpr_link_filter', 10, 2 );
 /**
- * sd_link_filter function.
+ * Replaces permalink with custom field value
  * 
  * @access public
  * @param mixed $link
