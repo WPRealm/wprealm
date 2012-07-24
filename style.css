@@ -547,9 +547,9 @@ textarea,
 .wp-caption {
 	background-color: #fafafa;
 	border: 1px solid #ddd;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
+	-moz-box-shadow: rgba(0,0,0, 0.35) 0px 0px 3px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
-         -moz-box-shadow: rgba(0,0,0, 0.35) 0px 0px 3px;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -1036,19 +1036,19 @@ nav#select-nav select {
 }
 
 .hentry {
-    background-color: #fff;
-    border: 1px solid #eee;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
-       -moz-box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    -webkit-border-radius: 3px;
-       -moz-border-radius: 3px;
-            border-radius: 3px;
-    margin: 0 0 40px;
-    padding: 0;
+	background-color: #fff;
+	border: 1px solid #eee;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
+	-moz-box-shadow: rgba(0,0,0, 0.35) 0px 0px 3px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin: 0 0 40px;
+	padding: 0;
 }
 
 .lead {
@@ -1363,9 +1363,9 @@ h5 {
 #article-meta {
 	background-color: #fff;
 	border: 1px solid #eee;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
+	-moz-box-shadow: rgba(0,0,0, 0.35) 0px 0px 3px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
-         -moz-box-shadow: rgba(0,0,0, 0.35) 0px 0px 3px;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -1994,9 +1994,9 @@ input:hover[type="submit"] {
 .depth-1,
 .even {
 	border: 1px solid #eee;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
+	-moz-box-shadow: rgba(0,0,0, 0.35) 0px 0px 3px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
-         -moz-box-shadow: rgba(0,0,0, 0.35) 0px 0px 3px;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
