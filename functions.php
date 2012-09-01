@@ -126,7 +126,7 @@ function wpr_js_plugins() {
     wp_enqueue_script('js_plugins', CHILD_URL . '/html/js/stickyfloor.js', array( 'jquery' ) );
 }
 
-add_action('wp_enqueue_scripts', 'wpr_js_dropdownmenu');
+add_action( 'wp_enqueue_scripts', 'wpr_js_dropdownmenu' );
 /**
  * Add functionality to make the <select>-box menu work.
  *
@@ -134,11 +134,11 @@ add_action('wp_enqueue_scripts', 'wpr_js_dropdownmenu');
  * @author Luc De Brouwer
  */
 function wpr_js_dropdownmenu() {
-    wp_enqueue_script('js_select', CHILD_URL . '/lib/js/dropdownmenu.js', array( 'jquery' ) );
+    wp_enqueue_script( 'js_select', CHILD_URL . '/lib/js/dropdownmenu.js', array( 'jquery' ) );
 }
 
 
-add_action('wp_enqueue_scripts', 'wpr_responsive_video');
+add_action( 'wp_enqueue_scripts', 'wpr_responsive_video' );
 /**
  * Adds responsive video jQuery
  * 
@@ -383,7 +383,7 @@ function wpr_select_nav( ) {
  * @author Luc De Brouwer
  */
 class wpr_Walker_Nav_Menu_Dropdown extends Walker_Nav_Menu {
-	function start_lvl(&$output, $depth){
+	function start_lvl( &$output, $depth ){
 		$indent = str_repeat( "\t", $depth );
 	}
 
@@ -505,22 +505,6 @@ function wpr_list_pings( $comment, $args, $depth ) {
 
 }
 
-add_filter( 'post_link', 'wpr_link_filter', 10, 2 );
-/**
- * Replaces permalink with custom field value
- * 
- * @access public
- * @param mixed $link
- * @param mixed $post
- * @return void
- */
-function wpr_link_filter( $link, $post ) {
-     // check to see if the post format is a link and if it has the proper custom field 
-     if ( has_post_format( 'link', $post ) && get_post_meta( $post->ID, '_format_link_url', true ) ) {
-          $link = get_post_meta( $post->ID, '_format_link_url', true );
-     }
-     return $link;
-}
 
 add_action( 'genesis_before_post_title', 'wpr_add_link_post_format_icon' );
 /**
@@ -568,7 +552,8 @@ function wpr_remove_post_title_on_quote_post_format() {
 	if ( has_post_format( 'quote' ) ) {
 	
    	remove_action( 'genesis_post_title', 'genesis_do_post_title' );
-   	} else {
+   	} 
+   	else {
 	add_action( 'genesis_post_title', 'genesis_do_post_title' );     
 	     
 	}
