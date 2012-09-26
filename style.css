@@ -430,7 +430,11 @@ td {
 }
 
 iframe {
-	border-radius: 5px;
+	border-radius: 3px;
+}
+
+.entry-content iframe {
+	width: 830px !important;
 }
 
 .clear {
