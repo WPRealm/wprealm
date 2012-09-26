@@ -65,7 +65,7 @@ function wpr_post_featured_content() {
 	// if a featured video isset
 	if( $video = get_post_meta( $post->ID, '_wpr_featured_video' ) ){
 		echo '<div class="videocontainer"> ' . wp_oembed_get( $video[0], array( 'width' => 882 ) ) . '</div>';
-		return;
+		return $video;
 	}
 	
 	// else, show featured image
@@ -343,9 +343,9 @@ function wpr_header_nav( ) {
 	$nav = '';
 	if ( has_nav_menu( 'primary' ) ) {
 		$args = array(
-			'theme_location' => 'primary',
-			'container' => '',
-			'echo' => 0,
+			'theme_location' 	=> 'primary',
+			'container' 		=> '',
+			'echo' 				=> 0,
 		);
 	
 		$nav = wp_nav_menu( $args );
@@ -364,11 +364,11 @@ function wpr_select_nav( ) {
 	$nav = '';
 	if ( has_nav_menu( 'primary' ) ) {
 		$args = array(
-			'theme_location' => 'primary',
-			'container' => '',
-			'echo' => 0,
-			'walker' => new wpr_Walker_Nav_Menu_Dropdown( ),
-			'items_wrap' => '<select><option value="">- Choose -</option>%3$s</select>',
+			'theme_location' 	=> 'primary',
+			'container' 		=> '',
+			'echo' 				=> 0,
+			'walker' 			=> new wpr_Walker_Nav_Menu_Dropdown( ),
+			'items_wrap' 		=> '<select><option value="">- Choose -</option>%3$s</select>',
 		);
 	
 		$nav = wp_nav_menu( $args );

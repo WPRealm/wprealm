@@ -429,6 +429,10 @@ td {
     zoom: 1
 }
 
+iframe {
+	border-radius: 5px;
+}
+
 .clear {
     clear: both
 }
