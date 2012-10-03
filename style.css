@@ -434,7 +434,13 @@ iframe {
 }
 
 .entry-content iframe {
+	border-radius: 3px;
 	width: 830px !important;
+}
+
+.single-format-link .entry-content iframe {
+	border-radius: 3px;
+	width: 765px !important;
 }
 
 .clear {
