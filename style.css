@@ -59,18 +59,10 @@
 
 */
 
-/* Import Fonts
+/* Import Google fonts
 ------------------------------------------------------------ */
 
 @import url(http://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
-
-@font-face {
-  font-family: "FontAwesome";
-  src: url('lib/font/fontawesome-webfont.eot');
-  src: url('lib/font/fontawesome-webfont.eot?#iefix') format('eot'), url('lib/font/fontawesome-webfont.woff') format('woff'), url('lib/font/fontawesome-webfont.ttf') format('truetype'), url('lib/font/fontawesome-webfont.svg#FontAwesome') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 
 /* Normalize.css
 ------------------------------------------------------------ */
@@ -2178,8 +2170,8 @@ div.gform_wrapper .gform_footer {
     */
 @font-face {
   font-family: "FontAwesome";
-  src: url('../font/fontawesome-webfont.eot');
-  src: url('../font/fontawesome-webfont.eot?#iefix') format('eot'), url('../font/fontawesome-webfont.woff') format('woff'), url('../font/fontawesome-webfont.ttf') format('truetype'), url('../font/fontawesome-webfont.svg#FontAwesome') format('svg');
+  src: url('lib/font/fontawesome-webfont.eot');
+  src: url('lib/font/fontawesome-webfont.eot?#iefix') format('eot'), url('lib/font/fontawesome-webfont.woff') format('woff'), url('lib/font/fontawesome-webfont.ttf') format('truetype'), url('lib/font/fontawesome-webfont.svg#FontAwesome') format('svg');
   font-weight: normal;
   font-style: normal;
 }
