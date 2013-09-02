@@ -1,0 +1,573 @@
+/*
+Theme Name: WP Realm
+Description: Used to style the TinyMCE editor.
+*/
+
+/* Import Fonts */
+/* Import Google fonts
+------------------------------------------------------------ */
+
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
+
+/* Site elements */
+
+html {
+	font-size: 62.5%;
+}
+
+html .mceContentBody {
+	max-width: 880px;
+
+}
+
+* {
+margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: transparent;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.8em;
+	color: #111;
+	font-weight: 400;
+}
+
+p,
+a,
+dl,
+td,
+th,
+ul,
+ol,
+blockquote {
+	font-size: 16px;
+}
+
+a,
+a:visited {
+	color: #f60;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0af;
+	text-decoration: underline;
+}
+
+a img {
+	border: none;
+}
+
+
+
+tr th,
+thead th,
+label,
+tr th,
+thead th {
+	font-family: 'Bitter', Arial, Helvetica, sans-serif;
+}
+
+pre {
+	font-family: "Courier 10 Pitch", Courier, monospace;
+}
+
+code, code var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+body, input, textarea {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+hr {
+	background-color: #e7e7e7;
+	border: 0;
+	clear: both;
+	height: 1px;
+	margin-bottom: 18px;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 18px;
+}
+
+ul {
+	list-style: square;
+	margin: 0 0 18px 1.5em;
+}
+
+ul ul,
+ul ul li {
+	list-style: circle;
+	list-style-type: circle;
+}
+
+ol {
+	list-style: decimal;
+	margin: 0 0 18px 1.5em;
+}
+
+ol ol {
+	list-style: upper-alpha;
+}
+
+ol ol ol {
+	list-style: lower-roman;
+}
+
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+dl {
+	margin: 0 0 24px 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin-bottom: 18px;
+}
+
+strong {
+	color: #000;
+	font-weight: bold;
+}
+
+cite,
+em,
+i {
+	border: none;
+	font-style: italic;
+}
+
+big {
+	font-size: 131.25%;
+}
+
+ins {
+	background: #ffc;
+	border: none;
+	color: #333;
+}
+
+del {
+	text-decoration: line-through;
+	color: #555;
+}
+
+blockquote {
+	background: url(images/blockquote.png) no-repeat;
+	border: none;
+	margin: 5px 5px 20px;
+	padding: 25px 30px 5px 70px;
+}
+
+blockquote p {
+	color: #999;
+	font-style: italic;
+}
+
+
+blockquote cite,
+blockquote em,
+blockquote i {
+	font-style: normal;
+}
+
+pre {
+	background: #f7f7f7;
+	color: #222;
+	line-height: 18px;
+	margin-bottom: 18px;
+	padding: 1.5em;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+ins {
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: 10px;
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+
+p,
+ul,
+ol,
+dd,
+pre,
+hr {
+	margin-bottom: 24px;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+pre,
+kbd,
+tt,
+var {
+	font-size: 15px;
+	line-height: 21px;
+}
+
+code {
+	font-size: 13px;
+}
+
+strong,
+b,
+dt,
+th {
+	color: #000;
+}
+
+h1,
+h2,
+h2 a,
+h2 a:visited,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Bitter', arial, serif;
+	line-height: 1.25;
+	margin: 0 0 10px;
+}
+
+h1 {
+	font-size: 30px;
+	font-size: 3.0rem;
+}
+
+.entry-title {
+	padding: 20px 25px 0 25px;
+}
+
+.taxonomy-description h1 {
+	margin: 0;
+}
+
+h2,
+h2 a,
+h2 a:visited {
+	font-size: 28px;
+	font-size: 2.8rem;
+}
+
+h2 a,
+h2 a:visited {
+	color: #333;
+	font-family: 'Bitter', arial, serif;
+}
+
+h2 a:hover {
+	color: #0af;
+	text-decoration: none;
+}
+
+.widget-area h2,
+.widget-area h2 a {
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin: 0 0 5px;
+}
+
+h3 {
+	font-size: 24px;
+	font-size: 2.3rem;
+}
+
+h4 {
+	font-size: 20px;
+	font-size: 2.0rem;
+}
+
+.sidebar h4 {
+	padding: 0 15px;
+}
+
+.taxonomy-description h1 {
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #ddd;
+	font-size: 14px;
+	font-size: 1.4rem;
+	padding: 9px 10px 8px;
+}
+
+.widget-area h4 a {
+	color: #333;
+	text-decoration: none;
+}
+
+#footer-widgets h4 {
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+h5 {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+table {
+	border: 1px solid #e7e7e7 !important;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 -1px 24px 0;
+	text-align: left;
+	width: 100%;
+}
+
+tr th,
+thead th {
+	border: none !important;
+	color: #888;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 18px;
+	padding: 9px 24px;
+}
+
+tr td {
+	border: none !important;
+	border-top: 1px solid #e7e7e7 !important;
+	padding: 6px 24px;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+.avatar,
+.featuredpage img,
+.featuredpost img,
+.post-image {
+	padding: 0;
+}
+
+.author-box .avatar {
+	background-color: #fff;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+img.avatar {
+	border-radius: 50%;
+	-khtml-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	max-width: 100% !important;
+}
+
+.post-image {
+	margin: 0 10px 10px 0;
+}
+
+.comment-list li .avatar {
+	background-color: #fff;
+	display: block;
+	margin: 5px 0 10px 10px;
+}
+
+img.centered,
+.aligncenter {
+	display: block;
+	margin: 0 auto 10px;
+}
+
+img.alignnone {
+	display: inline;
+	margin: 0 0 10px;
+}
+
+img.alignleft {
+	display: inline;
+	margin: 0 15px 10px 0;
+}
+
+img.alignright {
+	display: inline;
+	margin: 0 0 10px 15px;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 15px 10px 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 10px 15px;
+}
+
+img.spacer {
+	margin-right: 75px;
+}
+
+.wp-caption {
+	padding: 5px;
+	text-align: center;
+}
+
+p.wp-caption-text {
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin: 5px 0;
+}
+
+.wp-smiley,
+.wp-wink {
+	border: none;
+	float: none;
+}
+
+.gallery-caption {
+}
+
+
+.wp-caption {
+	background: #f1f1f1;
+	border: none;
+	-khtml-border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	color: #888;
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 20px;
+	max-width: 632px !important; /* prevent too-wide images from breaking layout */
+	padding: 4px;
+	text-align: center;
+}
+
+.wp-caption img {
+	margin: 5px;
+}
+
+.wp-caption p.wp-caption-text {
+	margin: 0 0 4px;
+}
+
+.wp-smiley {
+	margin: 0;
+}
+
+/* Column Classes
+------------------------------------------------------------ */
+
+.five-sixths,
+.four-fifths,
+.four-sixths,
+.one-fifth,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fifths,
+.three-fourths,
+.three-sixths,
+.two-fifths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+	float: left;
+	margin: 0 0 20px;
+	padding-left: 3%;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+	width: 48%;
+}
+
+.one-third,
+.two-sixths {
+	width: 31%;
+}
+
+.four-sixths,
+.two-thirds {
+	width: 65%;
+}
+
+.one-fourth {
+	width: 22.5%;
+}
+
+.three-fourths {
+	width: 73.5%;
+}
+
+.one-fifth {
+	width: 17.4%;
+}
+
+.two-fifths {
+	width: 37.8%;
+}
+
+.three-fifths {
+	width: 58.2%;
+}
+
+.four-fifths {
+	width: 78.6%;
+}
+
+.one-sixth {
+	width: 14%;
+}
+
+.five-sixths {
+	width: 82%;
+}
+
+.first {
+	clear: both;
+	padding-left: 0;
+}
+
+
+
