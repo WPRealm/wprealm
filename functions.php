@@ -126,27 +126,27 @@ function wpr_post_featured_content() {
 
 	);
 
-	//if( has_post_format( 'aside' ) ) {
-	//	return;
-	//} else
-	//if( has_post_format( 'chat' ) ) {
-	//	return;
-	//} else
-	//if( has_post_format( 'link' ) ) {
-	//	return;
-	//} else
-	//if( has_post_format( 'video' ) ) {
-	//	return;
-	//} else
-	//if( has_post_format( 'image' ) ) {
-	//	return;
-	//} else
-	//if( has_post_format( 'quote' ) ) {
-	//	return;
-	//} else
-	//if( has_post_format( 'status' ) ) {
-	//	return;
-	//} else
+	if( has_post_format( 'aside' ) )
+		return;
+
+	if( has_post_format( 'chat' ) )
+		return;
+
+	if( has_post_format( 'link' ) )
+		return;
+
+	if( has_post_format( 'video' ) )
+		return;
+
+	if( has_post_format( 'image' ) )
+		return;
+
+	if( has_post_format( 'quote' ) )
+		return;
+
+	if( has_post_format( 'status' ) )
+		return;
+
 	echo '<a href="' . get_permalink() . '"><img class="feature-content" src="'.$image_url . '" alt="' . esc_attr( $post->post_title ) . '" /></a>';
 
 	}
