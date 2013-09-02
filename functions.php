@@ -84,7 +84,7 @@ if( !class_exists( 'WP_Thumb' ) ){
    include 'lib/plugins/WPThumb/wpthumb.php';
 }
 
-add_action( 'genesis_before_post_title', 'wpr_post_featured_content' );
+add_action( 'genesis_entry_header', 'wpr_post_featured_content', 1 );
 /**
  * Use WPThumb to display featured images on the fly.
  *
