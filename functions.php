@@ -391,23 +391,23 @@ function wpr_select_nav( ) {
  * Custom walker to generate a <select>-based menu.
  *
  * @access public
- * @author Luc De Brouwer
+ * @author Luc De Brouwer, Daan Kortenbach
  */
 class wpr_Walker_Nav_Menu_Dropdown extends Walker_Nav_Menu {
-	function start_lvl( &$output, $depth ){
+	function start_lvl( &$output, $depth = 0, $args = array() ){
 		$indent = str_repeat( "\t", $depth );
 	}
 
-	function end_lvl(&$output, $depth){
+	function end_lvl( &$output, $depth = 0, $args = array() ){
 		$indent = str_repeat( "\t", $depth );
 	}
 
-	function start_el( &$output, $item, $depth, $args ){
+	function start_el( &$output, $object, $depth = 0, $args = array(), $current_object_id = 0 ){
 		$item->title = str_repeat( "&nbsp;", $depth * 4 ).$item->title;
 		$output .= '<option value="' . $item->url . '">' . $item->title;
 	}
 
-	function end_el( &$output, $item, $depth ){
+	function end_el( &$output, $object, $depth = 0, $args = array() ){
 	  $output .= "</option>\n";
 	}
 }
