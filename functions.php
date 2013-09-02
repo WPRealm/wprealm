@@ -149,8 +149,6 @@ function wpr_post_featured_content() {
 
 	echo '<a href="' . get_permalink() . '"><img class="feature-content" src="'.$image_url . '" alt="' . esc_attr( $post->post_title ) . '" /></a>';
 
-	}
-
 }
 
 add_action( 'wp_enqueue_scripts', 'wpr_js_dropdownmenu' );
