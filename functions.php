@@ -103,7 +103,7 @@ function wpr_post_featured_content() {
 	// if a featured video isset
 	if( $video = get_post_meta( $post->ID, '_wpr_featured_video' ) ){
 		echo '<div class="videocontainer"> ' . wp_oembed_get( $video[0], array( 'width' => 882 ) ) . '</div>';
-		return $video;
+		return;
 	}
 
 	// else, show featured image
