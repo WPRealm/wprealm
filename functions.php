@@ -100,54 +100,54 @@ function wpr_post_featured_content() {
 
 	if( ! is_page() ) {
 
-	// if a featured video isset
-	if( $video = get_post_meta( $post->ID, '_wpr_featured_video' ) ){
-		echo '<div class="videocontainer"> ' . wp_oembed_get( $video[0], array( 'width' => 882 ) ) . '</div>';
-		return;
-	}
+		// if a featured video isset
+		if( $video = get_post_meta( $post->ID, '_wpr_featured_video' ) ){
+			echo '<div class="videocontainer"> ' . wp_oembed_get( $video[0], array( 'width' => 882 ) ) . '</div>';
+			return;
+		}
 
-	// else, show featured image
-	$image_url = wpthumb(
+		// else, show featured image
+		$image_url = wpthumb(
 
-		// get thumnail url by post thumbnail ID
-		wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ),
-		$args = array(
-			'width'		=> 882,
-			'height'	=> 400,
-			'crop'		=> true,
-			/*'default'    => CHILD_DIR . '/images/default.png',*/
-			/*'watermark_options'=> array(
-				'mask' => wpthumb( CHILD_URL . '/images/wprealm-watermark.png', 'height=20'),
-				'padding' => 0,
-				'position' => 'rb',
-				'pre_resize' => false
-			)*/
-		)
+			// get thumnail url by post thumbnail ID
+			wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ),
+			$args = array(
+				'width'		=> 882,
+				'height'	=> 400,
+				'crop'		=> true,
+				/*'default'    => CHILD_DIR . '/images/default.png',*/
+				/*'watermark_options'=> array(
+					'mask' => wpthumb( CHILD_URL . '/images/wprealm-watermark.png', 'height=20'),
+					'padding' => 0,
+					'position' => 'rb',
+					'pre_resize' => false
+				)*/
+			)
 
-	);
+		);
 
-	if( has_post_format( 'aside' ) )
-		return;
+		if( has_post_format( 'aside' ) )
+			return;
 
-	if( has_post_format( 'chat' ) )
-		return;
+		if( has_post_format( 'chat' ) )
+			return;
 
-	if( has_post_format( 'link' ) )
-		return;
+		if( has_post_format( 'link' ) )
+			return;
 
-	if( has_post_format( 'video' ) )
-		return;
+		if( has_post_format( 'video' ) )
+			return;
 
-	if( has_post_format( 'image' ) )
-		return;
+		if( has_post_format( 'image' ) )
+			return;
 
-	if( has_post_format( 'quote' ) )
-		return;
+		if( has_post_format( 'quote' ) )
+			return;
 
-	if( has_post_format( 'status' ) )
-		return;
+		if( has_post_format( 'status' ) )
+			return;
 
-	echo '<a href="' . get_permalink() . '"><img class="feature-content" src="'.$image_url . '" alt="' . esc_attr( $post->post_title ) . '" /></a>';
+		echo '<a href="' . get_permalink() . '"><img class="feature-content" src="'.$image_url . '" alt="' . esc_attr( $post->post_title ) . '" /></a>';
 
 	}
 
